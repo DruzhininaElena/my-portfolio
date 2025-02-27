@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         border: 0;
     }
+    
+    body {
+        font-family: "Playfair Display", sans-serif;
+    }
 
     button {
         cursor: pointer;
