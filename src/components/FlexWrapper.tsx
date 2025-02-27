@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 type FlexWrapperPropType = {
-    direction?: string,
-    justify?: string,
-    align?: string,
-    wrap?: string
-
+    direction?: string;
+    justify?: string;
+    align?: string;
+    wrap?: string;
+    gap?: string
 }
 
 export const FlexWrapper = styled.div<FlexWrapperPropType>`
@@ -13,5 +13,6 @@ export const FlexWrapper = styled.div<FlexWrapperPropType>`
     flex-direction: ${props => props.direction || 'row'};
     justify-content: ${props => props.justify || 'start'};
     align-items: ${props => props.align || 'center'};
-    flex-wrap: ${props => props.wrap || 'nowrap'}
+    flex-wrap: ${props => props.wrap || 'nowrap'};
+    gap: ${props => props.gap || '0'};;
 `

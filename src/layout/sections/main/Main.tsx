@@ -18,7 +18,7 @@ export const Main = () => {
                     </div>
                 </div>
                 <PhotoStyled>
-                <img src={photo} alt="my-photo"/>
+                    <img src={photo} alt="my-photo"/>
                 </PhotoStyled>
             </FlexWrapper>
         </StyledMain>
@@ -31,10 +31,13 @@ const StyledMain = styled.section`
 `
 
 const PhotoStyled = styled.div`
-    width: 50%;
-     background-image: url(${background});
-     background-size: cover;
-     background-repeat: no-repeat;
+    background-image: url(${background});
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    img {
+        width: 100%;
+    }
 `
 
 
