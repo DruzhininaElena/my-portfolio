@@ -15,11 +15,10 @@ export const Social = () => {
 };
 
 const StyledSocial = styled.div`
-    margin: 0 auto;
-    max-width: 200px;
     ul {
         display: flex;
         justify-content: space-around;
+        min-width: 180px;
     }
 `
 
