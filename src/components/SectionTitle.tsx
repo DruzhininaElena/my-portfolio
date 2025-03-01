@@ -1,15 +1,13 @@
 import styled from 'styled-components';
+import {theme} from '../styles/Theme.ts';
 
 type SectionTitlePropsType = {
-    children: string
+    title: string
 }
 
-export const SectionTitle = ({children}: SectionTitlePropsType) => {
+export const SectionTitle = ({title}: SectionTitlePropsType) => {
     return (
-        <div>
-            <StyledSectionTitle>{children}</StyledSectionTitle>
-            <TitleUnderline/>
-        </div>
+        <StyledSectionTitle>{title}</StyledSectionTitle>
     );
 };
 
@@ -21,12 +19,17 @@ const StyledSectionTitle = styled.h2`
     color: #25282b;
     font-family: "Playfair Display", sans-serif;
     position: relative;
-    
-`
-const TitleUnderline = styled.div`
-    border-radius: 2px;
-    width: 100px;
-    height: 4px;
-    background: #fdc435;
-    margin: 4px auto 0 auto;
+    margin-bottom: 80px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: calc(100% + 4px);
+        right: 50%;
+        transform: translate(50%);
+        border-radius: 2px;
+        width: 100px;
+        height: 4px;
+        background: ${theme.colors.accent};
+    }
 `

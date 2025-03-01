@@ -5,8 +5,8 @@ import {projectsData} from './ProjectsData.ts';
 
 export const Projects = () => {
     return (
-        <StyledProjects>
-            <SectionTitle>Projects</SectionTitle>
+        <StyledProjects className={'container'}>
+            <SectionTitle title={'Projects'}/>
             {projectsData.map((item) => <Project {...item} key={item.id}/>)}
         </StyledProjects>
     );

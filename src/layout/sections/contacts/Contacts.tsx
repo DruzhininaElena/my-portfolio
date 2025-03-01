@@ -5,20 +5,20 @@ import {Button} from '../../../components/UI/button/Button.tsx';
 export const Contacts = () => {
     return (
         <StyledContacts>
-            <SectionTitle>Contact me</SectionTitle>
+            <SectionTitle title={'Contact me'}/>
             <StyledForm>
-                <div>
-                    <label htmlFor={'name'}>Name</label>
-                    <Field id={'name'}/>
-                </div>
-                <div>
-                    <label htmlFor={'email'}>Email</label>
-                    <Field id={'email'}/>
-                </div>
-                <div>
-                    <label htmlFor={'message'}>Message</label>
-                    <Field as={'textarea'} id={'message'}/>
-                </div>
+                <label>
+                    Name
+                    <Field/>
+                </label>
+                <label>
+                    Email
+                    <Field/>
+                </label>
+                <label>
+                    Message
+                    <Field/>
+                </label>
                 <Button type={'submit'}>Send</Button>
             </StyledForm>
         </StyledContacts>

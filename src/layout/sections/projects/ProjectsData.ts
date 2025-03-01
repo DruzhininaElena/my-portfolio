@@ -7,7 +7,6 @@ type projectDataType = {
     title: string;
     description: string;
     imageSrc: string;
-    directionContent?: string
 
 }
 export const projectsData: projectDataType[] = [
@@ -21,8 +20,7 @@ export const projectsData: projectDataType[] = [
         id: 2,
         title: 'Project Name2',
         description: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
-        imageSrc: imageProject2,
-        directionContent: 'row-reverse'
+        imageSrc: imageProject2
     },
     {
         id: 3,

@@ -1,16 +1,17 @@
 import {Header} from './layout/header/Header.tsx';
 import {Main} from './layout/sections/main/Main.tsx';
-import {Skills} from './layout/sections/skills/Skills.tsx';
-import {Container} from './components/container/Container.tsx';
+import {Skills} from './layout/sections/skills/Skills.tsx'
 import {Projects} from './layout/sections/projects/Projects.tsx';
 import {Testimony} from './layout/sections/testimony/Testimony.tsx';
 import {Contacts} from './layout/sections/contacts/Contacts.tsx';
 import {Footer} from './layout/Footer/Footer.tsx';
+import {ThemeProvider} from 'styled-components';
+import {theme} from './styles/Theme.ts';
 
 
 function App() {
     return (
-        <Container>
+        <ThemeProvider theme={theme}>
             <Header/>
             <Main/>
             <Skills/>
@@ -18,7 +19,7 @@ function App() {
             <Testimony/>
             <Contacts/>
             <Footer/>
-        </Container>
+        </ThemeProvider>
     )
 }
 

@@ -6,9 +6,9 @@ import {SkillsData} from './SkillsData.ts';
 
 export const Skills = () => {
     return (
-        <StyledSkills>
-            <SectionTitle>Skills</SectionTitle>
-            <FlexWrapper wrap={'wrap'} gap={'5px'} justify={'space-between'}>
+        <StyledSkills className={'container'}>
+            <SectionTitle title={'Skills'}/>
+            <FlexWrapper wrap={'wrap'} gap={'15px'} justify={'space-between'} align={'stretch'}>
                 {SkillsData.map(skill => <Skill {...skill} key={skill.iconId}/>)}
             </FlexWrapper>
         </StyledSkills>
@@ -16,6 +16,5 @@ export const Skills = () => {
 }
 
 const StyledSkills = styled.section`
-    background-color: #e1d4ed;
-    min-height: 100vh;
+    margin-bottom: 144px;
 `

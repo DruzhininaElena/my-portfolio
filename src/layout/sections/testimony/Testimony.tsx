@@ -8,7 +8,7 @@ export const Testimony = () => {
     return (
         <StyledTestimony>
             <FlexWrapper direction={'column'} align={'center'}>
-                <SectionTitle>Testimony</SectionTitle>
+                <SectionTitle title={'Testimony'}/>
                 <Icon iconId={'quote'} width={'50'} height={'50'} viewBox={'0 0 50 50'}/>
                 <Slider/>
             </FlexWrapper>
