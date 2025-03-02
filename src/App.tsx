@@ -4,7 +4,7 @@ import {Skills} from './layout/sections/skills/Skills.tsx'
 import {Projects} from './layout/sections/projects/Projects.tsx';
 import {Testimony} from './layout/sections/testimony/Testimony.tsx';
 import {Contacts} from './layout/sections/contacts/Contacts.tsx';
-import {Footer} from './layout/Footer/Footer.tsx';
+import {Footer} from './layout/footer/Footer.tsx';
 import {ThemeProvider} from 'styled-components';
 import {theme} from './styles/Theme.ts';
 

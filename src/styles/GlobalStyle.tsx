@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     
     body {
         font-family: 'Nunito', Helvetica, Arial, sans-serif;
-        background-color: ${theme.colors.background};
+        background-color: ${theme.colors.primaryBg};
         color: ${theme.colors.primaryFont}
     }
 
@@ -32,5 +32,18 @@ export const GlobalStyle = createGlobalStyle`
     }
     ul li {
         list-style: none;
+    }
+    
+    section {
+        margin-bottom: 144px;
+    }
+
+    img {
+        display: block;
+    }
+    
+    input, textarea {
+        font-family: inherit;
+        color: inherit;
     }
 `

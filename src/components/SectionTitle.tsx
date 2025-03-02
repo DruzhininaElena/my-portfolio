@@ -24,9 +24,11 @@ const StyledSectionTitle = styled.h2`
     &::after {
         content: '';
         position: absolute;
-        top: calc(100% + 4px);
-        right: 50%;
-        transform: translate(50%);
+        display: block;
+        margin: 0 auto;
+        bottom: -4px;
+        left: 50%;
+        transform: translate(-50%);
         border-radius: 2px;
         width: 100px;
         height: 4px;

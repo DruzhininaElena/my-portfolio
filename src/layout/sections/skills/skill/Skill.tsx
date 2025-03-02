@@ -20,7 +20,6 @@ export const Skill = ({iconId, title, iconViewBox}: SkillPropsType) => {
 };
 
 const StyledSkill = styled.div`
-    background-color: rgba(255, 255, 255, 0.22);
     max-width: 120px;
 `
 

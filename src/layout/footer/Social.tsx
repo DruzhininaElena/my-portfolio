@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Icon} from './icon/Icon.tsx';
+import {Icon} from '../../components/icon/Icon.tsx';
 
 
 export const Social = () => {
@@ -20,5 +20,7 @@ const StyledSocial = styled.div`
         justify-content: space-around;
         min-width: 180px;
     }
+    
+    margin-bottom: 32px;
 `
 

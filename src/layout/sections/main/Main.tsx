@@ -1,31 +1,27 @@
-import photo from '../../../assets/images/photo.webp'
-import background from '../../../assets/images/yellow-bg.png'
-import backgroundSvg from '../../../assets/images/yellow-bg.svg'
 import styled from 'styled-components';
 import {Button} from '../../../components/UI/button/Button.tsx';
 import {theme} from '../../../styles/Theme.ts';
+import {Container} from '../../../components/container/Container.tsx';
+import {Photo} from './Photo.tsx';
 
 export const Main = () => {
     return (
-        <StyledMain >
-            <ContentWrapper className={'container'}>
-                <MainTitle>Frontend Developer</MainTitle>
-                <MainHelloTitle>Hello, my name is Elena Druzhinina</MainHelloTitle>
-                <MainDescription>
-                    Short text with details about you, what you do or your professional career. You can add more
-                    information on the about page.
-                </MainDescription>
-                <ButtonWrapper>
-                    <Button>Projects</Button>
-                    <Button outlined>LinkedIn</Button>
-                </ButtonWrapper>
-            </ContentWrapper>
-            <PhotoWrapper>
-                <img src={backgroundSvg}/>
-                <Photo>
-                    <img src={photo} alt="my-photo"/>
-                </Photo>
-            </PhotoWrapper>
+        <StyledMain>
+            <Container>
+                <Photo/>
+                <ContentWrapper>
+                    <MainTitle>Frontend Developer</MainTitle>
+                    <MainHelloTitle>Hello, my name is Elena Druzhinina</MainHelloTitle>
+                    <MainDescription>
+                        Short text with details about you, what you do or your professional career. You can add more
+                        information on the about page.
+                    </MainDescription>
+                    <ButtonWrapper>
+                        <Button>Projects</Button>
+                        <Button outlined>LinkedIn</Button>
+                    </ButtonWrapper>
+                </ContentWrapper>
+            </Container>
         </StyledMain>
     );
 };
@@ -33,6 +29,13 @@ export const Main = () => {
 const StyledMain = styled.section`
     min-height: calc(100vh - 80px);
     display: flex;
+    margin-bottom: 0;
+    //position: relative;
+
+    ${Container} {
+        position: relative;
+    }
+
 `
 const ContentWrapper = styled.div`
     max-width: 50%;
@@ -63,31 +66,13 @@ const MainDescription = styled.p`
 const ButtonWrapper = styled.div`
     display: flex;
     margin-top: 32px;
+
     button + button {
         margin-left: 12px;
     }
 `
 
-const PhotoWrapper = styled.div`
-    // background-image: url(${background});
-    // background-size: contain;
-    // background-repeat: no-repeat;
-    max-width: 50%;
-    position: relative;
-    top: -328px;
-    right: -57px;
-    z-index: -50;
 
-    img {
-        width: 100%;
-        object-fit: cover;
-        
-    }
-`
-const Photo = styled.div`
-    position: absolute;
-    bottom: 0;
-    left: 0;
-`
+
 
 

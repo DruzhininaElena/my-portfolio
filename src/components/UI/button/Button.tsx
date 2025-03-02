@@ -2,12 +2,11 @@ import styled, {css} from 'styled-components';
 import {theme} from '../../../styles/Theme.ts';
 
 type ButtonPropsType = {
-    outlined?: boolean,
-    borderRadius?: string
+    outlined?: boolean
 }
 
 export const Button = styled.button<ButtonPropsType>`
-    border-radius: ${props => props.borderRadius || '8px'};
+    border-radius: 8px;
     background-color: ${theme.colors.accent};
     padding: 8px 24px;
     height: 43px;
