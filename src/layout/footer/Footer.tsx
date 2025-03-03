@@ -39,6 +39,6 @@ const BackgroundFooter = styled.div`
     position: absolute;
     bottom: 0;
     z-index: -1;
-    left: 50%;
-    transform: translate(-50%);
+    left: 0;
+    right: 0;
 `

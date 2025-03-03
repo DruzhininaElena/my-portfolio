@@ -30,6 +30,8 @@ const StyledProject = styled.div`
     margin: 0 104px 80px;
     border-radius: 24px;
     overflow: hidden;
+    
+    box-shadow: 0 6px 64px 0 rgba(112, 144, 176, 0.1);
 
     &:nth-last-of-type(even) {
         flex-direction: row-reverse;
@@ -71,8 +73,6 @@ const ProjectTitle = styled.h3`
 
 const ProjectDescription = styled.p`
     font-size: 18px;
-    line-height: 1.5;
-    color: ${theme.colors.secondaryFont};
     margin: 24px 0;
 `
 

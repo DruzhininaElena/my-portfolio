@@ -16,6 +16,12 @@ export const GlobalStyle = createGlobalStyle`
         border: 0;
     }
     
+    *::selection {
+        background-color: ${theme.colors.secondaryFont};
+        color: #fff;
+    }
+    
+    
     body {
         font-family: 'Nunito', Helvetica, Arial, sans-serif;
         background-color: ${theme.colors.primaryBg};
@@ -45,5 +51,10 @@ export const GlobalStyle = createGlobalStyle`
     input, textarea {
         font-family: inherit;
         color: inherit;
+    }
+    
+    p {
+        line-height: 1.5;
+        color: ${theme.colors.secondaryFont};
     }
 `

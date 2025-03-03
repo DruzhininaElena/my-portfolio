@@ -28,4 +28,16 @@ const GridWrapper = styled.div`
     justify-content: space-between;
     gap: 74px 0;
     justify-items: center;
+    
+    @media screen and (max-width: 1200px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @media screen and (max-width: 992px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+   
+    
 `

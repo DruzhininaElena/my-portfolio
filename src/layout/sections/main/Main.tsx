@@ -59,8 +59,6 @@ const MainDescription = styled.p`
     margin-top: 32px;
     padding-right: 22px;
     font-size: 24px;
-    line-height: 1.5;
-    color: ${theme.colors.secondaryFont};
 `
 
 const ButtonWrapper = styled.div`
