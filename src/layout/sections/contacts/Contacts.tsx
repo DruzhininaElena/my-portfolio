@@ -6,23 +6,23 @@ import {theme} from '../../../styles/Theme.ts';
 
 export const Contacts = () => {
     return (
-        <StyledContacts>
+        <StyledContacts id={'contacts'}>
             <Container>
                 <SectionTitle title={'Contact me'}/>
                 <StyledForm>
                     <FieldWrapper>
                         <FieldLabel htmlFor={'name'}>Name</FieldLabel>
-                        <Field id='name'/>
+                        <Field id="name"/>
                     </FieldWrapper>
                     <FieldWrapper>
                         <FieldLabel htmlFor={'name'}>Email</FieldLabel>
-                        <Field id='name'/>
+                        <Field id="name"/>
                     </FieldWrapper>
                     <FieldWrapper>
                         <FieldLabel htmlFor={'name'}>Message</FieldLabel>
-                        <Field as='textarea' id='name'/>
+                        <Field as="textarea" id="name"/>
                     </FieldWrapper>
-                    <Button type={'submit'}>Send</Button>
+                    <Button as={'button'} type={'submit'}>Send</Button>
                 </StyledForm>
             </Container>
         </StyledContacts>
@@ -30,7 +30,7 @@ export const Contacts = () => {
 }
 
 const StyledContacts = styled.section`
-   margin-bottom: 56px;
+    margin-bottom: 56px;
 `
 
 const StyledForm = styled.form`
@@ -44,7 +44,7 @@ const StyledForm = styled.form`
     button {
         align-self: flex-end;
     }
-    
+
     textarea {
         resize: none;
         height: 160px;
@@ -58,6 +58,7 @@ const FieldLabel = styled.label`
     margin-bottom: 8px;
     font-weight: 600;
     font-size: 16px;
+    flex-direction: column-reverse;
 `
 
 const Field = styled.input`

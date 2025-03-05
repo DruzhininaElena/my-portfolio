@@ -1,19 +1,19 @@
 import styled from 'styled-components';
-import {theme} from '../../styles/Theme.ts';
+import {theme} from '../../../styles/Theme.ts';
 
 export const Menu = () => {
     return (
-        <StyledNav>
+        <StyledMenu>
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li><a href={'#main'}>About</a></li>
+                <li><a href={'#projects'}>Projects</a></li>
+                <li><a href={'#contacts'}>Contacts</a></li>
             </ul>
-        </StyledNav>
+        </StyledMenu>
     );
 };
 
-const StyledNav = styled.nav`
+const StyledMenu = styled.nav`
     ul {
         font-family: "Raleway", sans-serif;
         display: flex;
@@ -27,4 +27,7 @@ const StyledNav = styled.nav`
         }
     }
     
+    @media ${theme.media.tablet} {
+        display: none;
+    }
 `

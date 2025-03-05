@@ -1,63 +1,87 @@
 import styled from 'styled-components';
 import {Button} from '../../../components/UI/button/Button.tsx';
 import {theme} from '../../../styles/Theme.ts';
-import {Container} from '../../../components/container/Container.tsx';
 import {Photo} from './Photo.tsx';
 
 export const Main = () => {
     return (
-        <StyledMain>
-            <Container>
-                <Photo/>
-                <ContentWrapper>
-                    <MainTitle>Frontend Developer</MainTitle>
-                    <MainHelloTitle>Hello, my name is Elena Druzhinina</MainHelloTitle>
-                    <MainDescription>
-                        Short text with details about you, what you do or your professional career. You can add more
-                        information on the about page.
-                    </MainDescription>
-                    <ButtonWrapper>
-                        <Button>Projects</Button>
-                        <Button outlined>LinkedIn</Button>
-                    </ButtonWrapper>
-                </ContentWrapper>
-            </Container>
+        <StyledMain id={'main'}>
+            <ContentWrapper>
+                <Title>Frontend Developer</Title>
+                <Name>Hello, my name is Elena Druzhinina</Name>
+                <Description>
+                    Short text with details about you, what you do or your professional career. You can add more
+                    information on the about page.
+                </Description>
+                <ButtonWrapper>
+                    <Button href={'#projects'}>Projects</Button>
+                    <Button outlined>LinkedIn</Button>
+                </ButtonWrapper>
+            </ContentWrapper>
+            <Photo/>
         </StyledMain>
     );
 };
 
 const StyledMain = styled.section`
-    min-height: calc(100vh - 80px);
+    min-height: 100vh;
+    margin: -80px auto 0;
+    max-width: 1440px;
+    position: relative;
     display: flex;
-    margin-bottom: 0;
-    //position: relative;
+    flex-wrap: wrap;
 
-    ${Container} {
-        position: relative;
+    @media ${theme.media.tablet} {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        margin-bottom: 90px;
     }
-
 `
 const ContentWrapper = styled.div`
-    max-width: 50%;
-    margin-top: 55px;
+    width: 50%;
+    margin-top: 135px;
     padding-right: 92px;
+    padding-left: 120px;
+
+    @media ${theme.media.desktopXl} {
+        padding-left: 90px;
+        padding-right: 0;
+    }
+
+    @media ${theme.media.desktopLg} {
+        padding-left: 60px;
+    }
+
+    @media ${theme.media.tablet} {
+        width: 100%;
+        margin-top: 50px;
+        padding: 0 30px;
+    }
+
+    @media ${theme.media.mobile} {
+        padding: 0 15px;
+    }
 `
-const MainTitle = styled.h1`
+const Title = styled.h1`
     font-weight: 700;
     font-size: 20px;
     text-transform: uppercase;
     color: ${theme.colors.accent};
+
+    @media ${theme.media.desktopXl} {
+        width: 100%;
+        margin-top: 0;
+    }
 `
 
-const MainHelloTitle = styled.h2`
+const Name = styled.h2`
     font-family: "Roboto", sans-serif;
     font-weight: 700;
-    font-size: 63px;
+    font-size: calc((100vw - 375px) / (1440 - 375) * (63 - 42) + 42px);
     line-height: 1.2;
 `
-const MainDescription = styled.p`
+const Description = styled.p`
     margin-top: 32px;
-    padding-right: 22px;
     font-size: 24px;
 `
 
@@ -65,7 +89,7 @@ const ButtonWrapper = styled.div`
     display: flex;
     margin-top: 32px;
 
-    button + button {
+    a + a {
         margin-left: 12px;
     }
 `

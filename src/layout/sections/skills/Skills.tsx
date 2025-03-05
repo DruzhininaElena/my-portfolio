@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {SectionTitle} from '../../../components/SectionTitle.tsx';
-import {Skill} from './skill/Skill.tsx';
+import {Icon} from '../../../components/icon/Icon.tsx';
 import {SkillsData} from './SkillsData.ts';
 import {Container} from '../../../components/container/Container.tsx';
 
@@ -10,7 +10,7 @@ export const Skills = () => {
             <Container>
                 <SectionTitle title={'Skills'}/>
                 <GridWrapper>
-                    {SkillsData.map(skill => <Skill {...skill} key={skill.iconId}/>)}
+                    {SkillsData.map(skill => <Icon {...skill} key={skill.iconId}/>)}
                 </GridWrapper>
             </Container>
 

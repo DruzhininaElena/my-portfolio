@@ -6,21 +6,25 @@ type ProjectPropsType = {
     title: string;
     description: string,
     imageSrc: string,
+    imageSrcWebp: string,
     directionContent?: string
 
 }
 
-export const Project = ({title, description, imageSrc}: ProjectPropsType) => {
+export const Project = ({title, description, imageSrc, imageSrcWebp}: ProjectPropsType) => {
     return (
         <StyledProject>
             <ProjectContent>
                 <ContentWrapper>
                     <ProjectTitle>{title}</ProjectTitle>
                     <ProjectDescription>{description}</ProjectDescription>
-                    <Button as='a' href='#' outlined>View Project</Button>
+                    <Button href='#' outlined>View Project</Button>
                 </ContentWrapper>
             </ProjectContent>
-            <ProjectImg src={imageSrc} alt="project image"/>
+            <ProjectImg>
+                <source srcSet={imageSrcWebp} type={'image/webp'}/>
+                <img src={imageSrc} alt="project photo"/>
+            </ProjectImg>
         </StyledProject>
     );
 }
@@ -33,13 +37,21 @@ const StyledProject = styled.div`
     
     box-shadow: 0 6px 64px 0 rgba(112, 144, 176, 0.1);
 
-    &:nth-last-of-type(even) {
+    &:nth-of-type(even) {
         flex-direction: row-reverse;
     }
     
-    //@media screen and (max-width: 1200px) {
-    //    margin: 0 0 80px 0;
-    //}
+    
+    @media ${theme.media.desktopXl} {
+        margin: 0 0 80px 0;
+    }
+
+    @media ${theme.media.tablet} {
+        flex-direction: column-reverse;
+        &:nth-of-type(even) {
+            flex-direction: column-reverse;
+        }
+    }
 `
 
 const ProjectContent = styled.div`
@@ -48,6 +60,10 @@ const ProjectContent = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media ${theme.media.tablet} {
+        width: 100%;
+    }
 `
 
 const ContentWrapper = styled.div`
@@ -55,9 +71,13 @@ const ContentWrapper = styled.div`
     ${Button} {
         border-radius: 24px;
     }
+
+    @media ${theme.media.tablet} {
+        padding: 130px 30px;
+    }
 `
 
-// const ProjectTitle = dfstyled(SectionTitle)`
+// const ProjectTitle = styled(SectionTitle)`
 //     font-size: 20px;
 //     &::after {
 //         display: none;
@@ -76,7 +96,16 @@ const ProjectDescription = styled.p`
     margin: 24px 0;
 `
 
-const ProjectImg = styled.img`
+const ProjectImg = styled.picture`
     width: 50%;
-    object-fit: cover;
+    source, img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    @media ${theme.media.tablet} {
+        width: 100%;
+        height: 524px;
+    }
 `
