@@ -34,4 +34,16 @@ const StyledSectionTitle = styled.h2`
         height: 4px;
         background: ${theme.colors.accent};
     }
+
+    @media ${theme.media.desktopLg} {
+        margin-bottom: 70px;
+    }
+    
+    @media ${theme.media.tablet} {
+        margin-bottom: 60px;
+    }
+
+    @media ${theme.media.mobile} {
+        margin-bottom: 50px;
+    }
 `

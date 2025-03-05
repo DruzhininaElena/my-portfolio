@@ -6,7 +6,7 @@ import {Container} from '../../../components/container/Container.tsx';
 
 export const Projects = () => {
     return (
-        <StyledProjects>
+        <StyledProjects id={'projects'}>
             <Container>
                 <SectionTitle title={'Projects'}/>
                 {projectsData.map((item) => <Project {...item} key={item.id}/>)}

@@ -5,7 +5,7 @@ type ButtonPropsType = {
     outlined?: boolean
 }
 
-export const Button = styled.button<ButtonPropsType>`
+export const Button = styled.a<ButtonPropsType>`
     border-radius: 8px;
     background-color: ${theme.colors.accent};
     padding: 8px 24px;
