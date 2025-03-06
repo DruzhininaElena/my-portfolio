@@ -25,23 +25,22 @@ export const Main = () => {
 
 const StyledMain = styled.section`
     min-height: 100vh;
-    margin: -80px auto 0;
+    margin: -80px auto 90px;
     max-width: 1440px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    
 
-    @media ${theme.media.tablet} {
+    @media ${theme.media.desktopLg} {
         flex-direction: column-reverse;
         justify-content: flex-end;
-        margin-bottom: 90px;
     }
 `
 const ContentWrapper = styled.div`
     width: 50%;
     margin-top: 135px;
-    padding-right: 92px;
-    padding-left: 120px;
+    padding: 0 92px 0 120px;
 
     @media ${theme.media.desktopXl} {
         padding-left: 90px;
@@ -49,12 +48,12 @@ const ContentWrapper = styled.div`
     }
 
     @media ${theme.media.desktopLg} {
-        padding-left: 60px;
+        padding: 0 60px;
+        margin-top: 50px;
+        width: 100%;
     }
 
     @media ${theme.media.tablet} {
-        width: 100%;
-        margin-top: 50px;
         padding: 0 30px;
     }
 

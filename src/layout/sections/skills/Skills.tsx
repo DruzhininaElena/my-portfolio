@@ -13,7 +13,6 @@ export const Skills = () => {
                     {SkillsData.map(skill => <Icon {...skill} key={skill.iconId}/>)}
                 </GridWrapper>
             </Container>
-
         </StyledSkills>
     );
 }

@@ -25,7 +25,8 @@ export const GlobalStyle = createGlobalStyle`
     body {
         font-family: 'Nunito', Helvetica, Arial, sans-serif;
         background-color: ${theme.colors.primaryBg};
-        color: ${theme.colors.primaryFont}
+        color: ${theme.colors.primaryFont};
+        min-width: 375px;
     }
 
     button {

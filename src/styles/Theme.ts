@@ -12,7 +12,7 @@ export const theme = {
 
     media: {
         desktopXl: 'screen and (max-width: 1199px)',
-        desktopLg: 'screen and (max-width: 767px)',
+        desktopLg: 'screen and (max-width: 991px)',
         tablet: 'screen and (max-width: 767px)',
         mobile: 'screen and (max-width: 575px)'
     }

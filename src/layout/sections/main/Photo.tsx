@@ -27,7 +27,16 @@ export const Photo = () => {
 const PhotoWrapper = styled.div`
     width: 50%;
 
+    @media ${theme.media.desktopLg} {
+        width: 60%;
+        align-self: flex-end;
+    }
+
     @media ${theme.media.tablet} {
+        width: 75%;
+    }
+
+    @media ${theme.media.mobile} {
         width: 100%;
     }
 `
