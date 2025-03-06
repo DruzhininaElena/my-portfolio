@@ -34,6 +34,7 @@ const StyledProject = styled.div`
     margin: 0 104px 80px;
     border-radius: 24px;
     overflow: hidden;
+    min-height: 524px;
     
     box-shadow: 0 6px 64px 0 rgba(112, 144, 176, 0.1);
 
@@ -93,7 +94,7 @@ const ProjectTitle = styled.h3`
 
 const ProjectDescription = styled.p`
     font-size: 18px;
-    margin: 24px 0;
+    margin: 24px 0 30px;
 `
 
 const ProjectImg = styled.picture`
@@ -106,6 +107,6 @@ const ProjectImg = styled.picture`
 
     @media ${theme.media.tablet} {
         width: 100%;
-        height: 524px;
+        min-height: 524px;
     }
 `

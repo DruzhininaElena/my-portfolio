@@ -24,14 +24,14 @@ export const projectsData: projectDataType[] = [
     {
         id: 2,
         title: 'Project Name2',
-        description: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
+        description: 'What was your role, your deliverables, if the project was personal, freelancing.',
         imageSrc: imageProject2,
         imageSrcWebp: imageProject2Webp
     },
     {
         id: 3,
         title: 'Project Name3',
-        description: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
+        description: 'You can also add in this description the type of the project, if it was for web, mobile, electron.',
         imageSrc: imageProject3,
         imageSrcWebp: imageProject3Webp
     },

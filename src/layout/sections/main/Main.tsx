@@ -82,6 +82,11 @@ const Name = styled.h2`
 const Description = styled.p`
     margin-top: 32px;
     font-size: 24px;
+    padding-right: 22px;
+
+    @media ${theme.media.desktopLg} {
+        padding-right: 0;
+    }
 `
 
 const ButtonWrapper = styled.div`

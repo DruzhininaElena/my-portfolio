@@ -21,6 +21,6 @@ const StyledSocial = styled.div`
         min-width: 180px;
     }
     
-    margin-bottom: 32px;
+    margin-bottom: 29px;
 `
 

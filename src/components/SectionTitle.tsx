@@ -19,14 +19,14 @@ const StyledSectionTitle = styled.h2`
     color: #25282b;
     font-family: "Playfair Display", sans-serif;
     position: relative;
-    margin-bottom: 80px;
+    margin-bottom: 88px;
 
     &::after {
         content: '';
         position: absolute;
         display: block;
         margin: 0 auto;
-        bottom: -4px;
+        bottom: -8px;
         left: 50%;
         transform: translate(-50%);
         border-radius: 2px;
