@@ -649,6 +649,9 @@ Error generating stack: `+e.message+`
         background-color: ${J.colors.primaryBg};
         color: ${J.colors.primaryFont};
         //min-width: 375px;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
     button {
