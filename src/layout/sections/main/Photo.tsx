@@ -31,26 +31,15 @@ export const Photo = () => {
 };
 
 const PhotoWrapper = styled.div`
-    width: 720px;
-    svg {
-        width: 777px;
-    }
-    flex-shrink: 0;
-    transform: translate(8%, -28%);
+    width: 50%;
+    transform: translate(0, -28%);
 
     @media ${theme.media.desktopLg} {
         width: 60%;
-        svg {
-            width: 100%;
-        }
-        //align-self: flex-end;
     }
 
     @media ${theme.media.desktopLg} {
         width: 60%;
-        svg {
-            width: 100%;
-        }
         align-self: flex-end;
     }
 
@@ -59,10 +48,7 @@ const PhotoWrapper = styled.div`
     }
 
     @media ${theme.media.mobile} {
-        //svg {
-        //    width: 486px;
-        //}
-        width: 110%;
-        transform: translate(9%, -20%);
+        width: 100%;
+        transform: translate(0%, -20%);
     }
 `

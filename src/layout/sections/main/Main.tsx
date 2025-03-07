@@ -28,7 +28,7 @@ const StyledMain = styled.section`
     max-width: 1440px;
     position: relative;
     display: flex;
-    //flex-wrap: wrap;
+    flex-wrap: wrap;
     
 
     @media ${theme.media.desktopLg} {
