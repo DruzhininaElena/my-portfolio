@@ -7,7 +7,7 @@ import backgroundFooter from '../../assets/images/yellow-bg-footer.png'
 export const Footer = () => {
     return (
         <StyledFooter>
-                <FlexWrapper direction={'column'} align={'center'}>
+                <FlexWrapper $direction={'column'} $align={'center'}>
                     <Social/>
                     <Copyright>Madelyn Torff 2021 </Copyright>
                 </FlexWrapper>

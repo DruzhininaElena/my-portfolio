@@ -26,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Nunito', Helvetica, Arial, sans-serif;
         background-color: ${theme.colors.primaryBg};
         color: ${theme.colors.primaryFont};
-        min-width: 375px;
+        //min-width: 375px;
     }
 
     button {
@@ -57,5 +57,11 @@ export const GlobalStyle = createGlobalStyle`
     p {
         line-height: 1.5;
         color: ${theme.colors.secondaryFont};
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+        *, *:before, *:after {
+            animation: none !important;
+        }
     }
 `

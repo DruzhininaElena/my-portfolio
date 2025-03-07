@@ -2,7 +2,7 @@ import styled, {css} from 'styled-components';
 import {theme} from '../../../styles/Theme.ts';
 
 type ButtonPropsType = {
-    outlined?: boolean
+    $outlined?: boolean
 }
 
 export const Button = styled.a<ButtonPropsType>`
@@ -18,7 +18,7 @@ export const Button = styled.a<ButtonPropsType>`
         opacity: 0.8;
     }
     
-    ${props=> props.outlined && css<ButtonPropsType>`
+    ${props=> props.$outlined && css<ButtonPropsType>`
         border: 2px solid ${theme.colors.primaryFont};
         background-color: transparent;
         padding-top: 6px;

@@ -18,7 +18,7 @@ export const Project = ({title, description, imageSrc, imageSrcWebp}: ProjectPro
                 <ContentWrapper>
                     <ProjectTitle>{title}</ProjectTitle>
                     <ProjectDescription>{description}</ProjectDescription>
-                    <Button href='#' outlined>View Project</Button>
+                    <Button href='#' $outlined>View Project</Button>
                 </ContentWrapper>
             </ProjectContent>
             <ProjectImg>
@@ -80,8 +80,9 @@ const ContentWrapper = styled.div`
 
 // const ProjectTitle = styled(SectionTitle)`
 //     font-size: 20px;
+//
 //     &::after {
-//         display: none;
+//         color: rgba(255, 0, 0, 0);
 //     }
 // `
 
@@ -108,5 +109,8 @@ const ProjectImg = styled.picture`
     @media ${theme.media.tablet} {
         width: 100%;
         min-height: 524px;
+        source, img {
+            min-height: 524px;
+        }
     }
 `

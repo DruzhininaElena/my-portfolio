@@ -10,7 +10,7 @@ export const Testimony = () => {
     return (
         <StyledTestimony>
             <Container>
-                <FlexWrapper direction={'column'} align={'center'}>
+                <FlexWrapper $direction={'column'} $align={'center'}>
                     <SectionTitle title={'Testimony'}/>
                     <SliderWrapper>
                         <IconWrapper className={'firstQuote'}>

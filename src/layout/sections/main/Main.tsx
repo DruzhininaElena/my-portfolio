@@ -15,7 +15,7 @@ export const Main = () => {
                 </Description>
                 <ButtonWrapper>
                     <Button href={'#projects'}>Projects</Button>
-                    <Button outlined>LinkedIn</Button>
+                    <Button href={'#'} $outlined>LinkedIn</Button>
                 </ButtonWrapper>
             </ContentWrapper>
             <Photo/>
@@ -24,17 +24,17 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-    min-height: 100vh;
-    margin: -80px auto 90px;
+    margin: -80px auto 0;
     max-width: 1440px;
     position: relative;
     display: flex;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
     
 
     @media ${theme.media.desktopLg} {
         flex-direction: column-reverse;
         justify-content: flex-end;
+        margin-bottom: 144px;
     }
 `
 const ContentWrapper = styled.div`
@@ -49,7 +49,7 @@ const ContentWrapper = styled.div`
 
     @media ${theme.media.desktopLg} {
         padding: 0 60px;
-        margin-top: 50px;
+        margin-top: -20%;
         width: 100%;
     }
 
@@ -59,6 +59,7 @@ const ContentWrapper = styled.div`
 
     @media ${theme.media.mobile} {
         padding: 0 15px;
+        margin-top: -15%;
     }
 `
 const Title = styled.h1`
