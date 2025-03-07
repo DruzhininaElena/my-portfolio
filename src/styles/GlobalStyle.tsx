@@ -27,6 +27,9 @@ export const GlobalStyle = createGlobalStyle`
         background-color: ${theme.colors.primaryBg};
         color: ${theme.colors.primaryFont};
         //min-width: 375px;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
     button {
