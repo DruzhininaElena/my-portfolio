@@ -1,50 +1,37 @@
-import styled from 'styled-components';
 import {Logo} from '../../components/logo/Logo.tsx';
-import {Menu} from './menu/Menu.tsx';
+import {MenuDesktop} from './menuDesktop/MenuDesktop.tsx';
 import {Container} from '../../components/container/Container.tsx';
 import {FlexWrapper} from '../../components/FlexWrapper.tsx';
 import {MenuMobile} from './menuMobile/MenuMobile.tsx';
-// import {Icon} from '../../components/icon/Icon.tsx';
+import * as React from 'react';
+import {S} from './Heder_Styles.ts';
+import {useState} from 'react';
 
-export const Header = () => {
+export const Header: React.FC = () => {
+    const [scroll, setScroll] = useState(window.scrollY)
+
+    const handleScroll = () => {
+        setScroll(window.scrollY);
+    };
+    React.useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
-        <StyledHeader>
+        <S.Header $isPageScrolled={scroll > 0}>
             <Container>
-                <FlexWrapper justify={'space-between'} align={'center'}>
+                <FlexWrapper $justify={'space-between'} $align={'center'}>
                     <Logo/>
-                    <Menu/>
+                    <MenuDesktop/>
                 </FlexWrapper>
                 <MenuMobile/>
                 {/*<ThemeIcon>*/}
                 {/*    <Icon iconId={'theme'} height={'40'} width={'40'} viewBox={'0 0 24 24'}/>*/}
                 {/*</ThemeIcon>*/}
             </Container>
-        </StyledHeader>
+        </S.Header>
     );
 };
 
-const StyledHeader = styled.header`
-    ${FlexWrapper} {
-        padding: 12px 0;
-    }
-    //position: absolute;
-    //z-index: 10;
-    //top: 0;
-    //left: 0;
-    //right: 0;
-    
-    position: sticky;
-    top: 0;
-    z-index: 10;
 
-    ${Container} {
-        position: relative;
-    }
-`
-
-// const ThemeIcon = styled.div`
-//     position: absolute;
-//     top: 20px;
-//     right: 20px;
-//     cursor: pointer;
-// `
