@@ -1,36 +1,16 @@
-import styled, {css} from 'styled-components';
 import {theme} from '../../../styles/Theme.ts';
-import {useState} from 'react';
+import styled, {css} from 'styled-components';
 
-export const MenuMobile = () => {
+const MenuList = styled.ul`
+    font-family: "Raleway", sans-serif;
+    display: flex;
+    gap: 48px;
+    font-weight: 500;
+    line-height: 1.5;
 
-    const [isOpen, setIsOpen] = useState(false)
-
-    function handleClickBurgerButton() {
-        setIsOpen(!isOpen)
-    }
-    // function handleClickMenuItem(event: React.MouseEvent<HTMLButtonElement>) {
-    //     if (event.target.tagName === 'A') {
-    //         setIsOpen(!isOpen)
-    //     }
-    // }
-
-    return (
-        <StyledMenuMobile >
-            <BurgerButton $isOpen={isOpen} onClick={handleClickBurgerButton} aria-haspopup>
-                <span></span>
-            </BurgerButton>
-            <MobileMenuPopup $isOpen={isOpen} aria-modal>
-                <MenuList>
-                    <MenuItem><a href={'#main'}>About</a></MenuItem>
-                    <MenuItem><a href={'#projects'}>Projects</a></MenuItem>
-                    <MenuItem><a href={'#contacts'}>Contacts</a></MenuItem>
-                </MenuList>
-            </MobileMenuPopup>
-        </StyledMenuMobile>
-
-    );
-};
+    font-size: 18px;
+    color: ${theme.colors.primaryFont};
+`
 
 const MobileMenuPopup = styled.div<{$isOpen: boolean}>`
     position: fixed;
@@ -47,42 +27,22 @@ const MobileMenuPopup = styled.div<{$isOpen: boolean}>`
         align-items: center;
         justify-content: center;
     `}
-
-`
-
-const StyledMenuMobile = styled.nav`
     
-`
+    ul {
+        font-size: 34px;
+        color: ${theme.colors.primaryBg};
 
-const MenuList = styled.ul`
-    font-family: "Raleway", sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 1.5;
-    color: ${theme.colors.primaryBg};
+        flex-direction: column;
+        align-items: center;
 
-    @media ${theme.media.mobile} {
-        font-size: 28px;
-    }
-`
-
-const MenuItem = styled.li`
-    & + li {
-        margin-top: 40px;
-    }
-
-    @media ${theme.media.mobile} {
-        & + li {
-            margin-top: 30px;
+        @media ${theme.media.mobile} {
+            font-size: 28px;
         }
     }
+
 `
 
 const BurgerButton = styled.div<{$isOpen: boolean}>`
-    display: none;
     width: 30px;
     height: 30px;
     position: fixed;
@@ -139,10 +99,7 @@ const BurgerButton = styled.div<{$isOpen: boolean}>`
         span {
             background-color: rgba(0, 0, 0, 0);
         }
-    `} 
-    @media ${theme.media.tablet} {
-        display: block;
-    }
+    `}
 
     @media ${theme.media.mobile} {
         width: 20px;
@@ -169,3 +126,9 @@ const BurgerButton = styled.div<{$isOpen: boolean}>`
     }
 
 `
+
+export const S = {
+    MenuList,
+    MobileMenuPopup,
+    BurgerButton
+}

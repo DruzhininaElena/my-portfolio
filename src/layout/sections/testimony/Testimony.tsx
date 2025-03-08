@@ -1,79 +1,33 @@
-import styled from 'styled-components';
-import {SectionTitle} from '../../../components/SectionTitle.tsx';
+import {SectionTitle} from '../../../components/sectionTitle/SectionTitle.tsx';
 import {Icon} from '../../../components/icon/Icon.tsx';
-import {FlexWrapper} from '../../../components/FlexWrapper.tsx';
+import {FlexWrapper} from '../../../components/FlexWrapper.ts';
 import {Slider} from '../../../components/slider/Slider.tsx';
-import {Container} from '../../../components/container/Container.tsx';
-import {theme} from '../../../styles/Theme.ts';
+import {Container} from '../../../components/container/Container.ts';
+import {S} from './Testimony_Styles.ts';
+import React from 'react';
 
-export const Testimony = () => {
+export const Testimony: React.FC = () => {
     return (
-        <StyledTestimony>
+        <section>
             <Container>
                 <FlexWrapper $direction={'column'} $align={'center'}>
                     <SectionTitle title={'Testimony'}/>
-                    <SliderWrapper>
-                        <IconWrapper className={'firstQuote'}>
+                    <S.SliderWrapper>
+                        <S.IconWrapper className={'firstQuote'}>
                             <Icon iconId={'quote'} width={'30'} height={'30'} viewBox={'0 0 50 50'}/>
-                        </IconWrapper>
+                        </S.IconWrapper>
                         <Slider/>
-                        <IconWrapper className={'secondQuote'}>
+                        <S.IconWrapper className={'secondQuote'}>
                             <Icon iconId={'quote'} width={'30'} height={'30'} viewBox={'0 0 50 50'}/>
-                        </IconWrapper>
-                    </SliderWrapper>
-                    <Pagination>
+                        </S.IconWrapper>
+                    </S.SliderWrapper>
+                    <S.Pagination>
                         <span></span>
                         <span className={'active'}></span>
                         <span></span>
-                    </Pagination>
+                    </S.Pagination>
                 </FlexWrapper>
             </Container>
-        </StyledTestimony>
+        </section>
     );
 }
-
-const StyledTestimony = styled.section`
-
-`
-const SliderWrapper = styled.div`
-    background-color: ${theme.colors.secondaryBg};
-    border-radius: 24px;
-    max-width: 500px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    margin: 49px 0 20px;
-
-    box-shadow: 0 6px 64px 0 rgba(112, 144, 176, 0.1);
-
-    position: relative;
-`
-
-const IconWrapper = styled.div`
-    &.firstQuote {
-        align-self: flex-start;
-    }
-    &.secondQuote {
-        align-self: flex-end;
-    }
-`
-
-const Pagination = styled.div`
-    span {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        background-color: ${theme.colors.secondaryFont};
-        border-radius: 50%;
-    }
-
-    span.active {
-        background-color: ${theme.colors.accent};
-        width: 20px;
-        border-radius: 20px;
-    }
-    
-    span + span {
-        margin-left: 5px;
-    }
-`

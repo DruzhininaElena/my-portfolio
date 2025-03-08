@@ -1,42 +1,19 @@
-import styled from 'styled-components';
-import {SectionTitle} from '../../../components/SectionTitle.tsx';
+import {SectionTitle} from '../../../components/sectionTitle/SectionTitle.tsx';
 import {Icon} from '../../../components/icon/Icon.tsx';
 import {SkillsData} from './SkillsData.ts';
-import {Container} from '../../../components/container/Container.tsx';
+import {Container} from '../../../components/container/Container.ts';
+import {S} from './Skills_Styles.ts';
+import React from 'react';
 
-export const Skills = () => {
+export const Skills: React.FC = () => {
     return (
-        <StyledSkills>
+        <S.StyledSkills>
             <Container>
                 <SectionTitle title={'Skills'}/>
-                <GridWrapper>
+                <S.GridWrapper>
                     {SkillsData.map(skill => <Icon {...skill} key={skill.iconId}/>)}
-                </GridWrapper>
+                </S.GridWrapper>
             </Container>
-        </StyledSkills>
+        </S.StyledSkills>
     );
 }
-
-const StyledSkills = styled.section`
-    margin-bottom: 144px;
-`
-
-const GridWrapper = styled.div`
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    justify-content: space-between;
-    gap: 74px 0;
-    justify-items: center;
-    
-    @media screen and (max-width: 1200px) {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    @media screen and (max-width: 992px) {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    @media screen and (max-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-   
-    
-`

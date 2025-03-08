@@ -1,43 +1,21 @@
-import styled from 'styled-components';
-import {Social} from './Social.tsx';
-import {FlexWrapper} from '../../components/FlexWrapper.tsx';
-import {theme} from '../../styles/Theme.ts';
-import backgroundFooter from '../../assets/images/yellow-bg-footer.png'
+import {Social} from './social/Social.tsx';
+import {FlexWrapper} from '../../components/FlexWrapper.ts';
 
-export const Footer = () => {
+import React from 'react';
+import {S} from './Footer_Styles.ts';
+
+export const Footer: React.FC = () => {
     return (
-        <StyledFooter>
+        <S.StyledFooter>
                 <FlexWrapper $direction={'column'} $align={'center'}>
                     <Social/>
-                    <Copyright>Madelyn Torff 2021 </Copyright>
+                    <S.Copyright>Madelyn Torff 2021 </S.Copyright>
                 </FlexWrapper>
                 {/*<BackgroundFooter>*/}
                 {/*    <img src={backgroundFooter} alt="background footer"/>*/}
                 {/*</BackgroundFooter>*/}
-        </StyledFooter>
+        </S.StyledFooter>
     );
 };
 
-const StyledFooter = styled.footer`
-    margin: 0 auto;
-    background-image: url(${backgroundFooter});
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom center;
-    max-width: 1440px;
-    width: 100%;
-`
-const Copyright = styled.small`
-    text-align: center;
-    font-size: 16px;
-    color: ${theme.colors.secondaryFont};
-    margin-bottom: 240px;
 
-    @media ${theme.media.tablet} {
-        margin-bottom: 200px;
-    }
-    
-    @media ${theme.media.mobile} {
-        margin-bottom: 177px;
-    }
-`

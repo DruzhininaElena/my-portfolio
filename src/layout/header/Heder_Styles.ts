@@ -1,6 +1,6 @@
 import styled, {css} from 'styled-components';
-import {Container} from '../../components/container/Container.tsx';
-import {FlexWrapper} from '../../components/FlexWrapper.tsx'
+import {Container} from '../../components/container/Container.ts';
+import {FlexWrapper} from '../../components/FlexWrapper.ts'
 
 const Header = styled.header<{$isPageScrolled: boolean}>`
     ${FlexWrapper} {

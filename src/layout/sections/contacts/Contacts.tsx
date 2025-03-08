@@ -1,75 +1,31 @@
-import styled from 'styled-components';
-import {SectionTitle} from '../../../components/SectionTitle.tsx';
+import {SectionTitle} from '../../../components/sectionTitle/SectionTitle.tsx';
 import {Button} from '../../../components/UI/button/Button.tsx';
-import {Container} from '../../../components/container/Container.tsx';
-import {theme} from '../../../styles/Theme.ts';
+import {Container} from '../../../components/container/Container.ts';
+import React from 'react';
+import {S} from './Contacts_Styles.ts';
 
-export const Contacts = () => {
+export const Contacts: React.FC = () => {
     return (
-        <StyledContacts id={'contacts'}>
+        <S.StyledContacts id={'contacts'}>
             <Container>
                 <SectionTitle title={'Contact me'}/>
-                <StyledForm>
-                    <FieldWrapper>
-                        <FieldLabel htmlFor={'name'}>Name</FieldLabel>
-                        <Field id="name"/>
-                    </FieldWrapper>
-                    <FieldWrapper>
-                        <FieldLabel htmlFor={'name'}>Email</FieldLabel>
-                        <Field id="name"/>
-                    </FieldWrapper>
-                    <FieldWrapper>
-                        <FieldLabel htmlFor={'name'}>Message</FieldLabel>
-                        <Field as="textarea" id="name"/>
-                    </FieldWrapper>
+                <S.StyledForm>
+                    <S.FieldWrapper>
+                        <S.FieldLabel htmlFor={'name'}>Name</S.FieldLabel>
+                        <S.Field id="name"/>
+                    </S.FieldWrapper>
+                    <S.FieldWrapper>
+                        <S.FieldLabel htmlFor={'email'}>Email</S.FieldLabel>
+                        <S.Field id="email"/>
+                    </S.FieldWrapper>
+                    <S.FieldWrapper>
+                        <S.FieldLabel htmlFor={'message'}>Message</S.FieldLabel>
+                        <S.Field as="textarea" id="message"/>
+                    </S.FieldWrapper>
                     <Button as={'button'} type={'submit'}>Send</Button>
-                </StyledForm>
+                </S.StyledForm>
             </Container>
-        </StyledContacts>
+        </S.StyledContacts>
     );
 }
 
-const StyledContacts = styled.section`
-    margin-bottom: 56px;
-`
-
-const StyledForm = styled.form`
-    max-width: 400px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    gap: 24px;
-
-    button {
-        align-self: flex-end;
-    }
-
-    textarea {
-        resize: none;
-        height: 160px;
-    }
-`
-const FieldWrapper = styled.div`
-`
-
-const FieldLabel = styled.label`
-    display: inline-block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    font-size: 16px;
-    flex-direction: column-reverse;
-`
-
-const Field = styled.input`
-    border: 1px solid ${theme.colors.borderColor};
-    border-radius: 8px;
-    width: 100%;
-    padding: 8px 12px;
-    min-height: 40px;
-    background-color: ${theme.colors.secondaryBg};
-    
-    &:focus {
-        outline: 1px solid ${theme.colors.accent};
-    }
-`

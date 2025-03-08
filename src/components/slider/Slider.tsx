@@ -1,53 +1,21 @@
-import styled from 'styled-components';
 import testimonyPhoto from '../../assets/images/testimony-photo.jpg'
+import React from 'react';
+import {S} from './Slider_Styles.ts';
 
-export const Slider = () => {
+export const Slider: React.FC = () => {
     return (
-        <StyledSlider>
-            <Slide>
-                <TestimonyPhoto>
-                    <img src={testimonyPhoto} alt={'user photo'}/>
-                </TestimonyPhoto>
-                <TestimonyText>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </TestimonyText>
-                <TestimonyName>
-                    @Karmani
-                </TestimonyName>
-            </Slide>
-        </StyledSlider>
+        <div>
+            <S.TestimonyPhoto>
+                <img src={testimonyPhoto} alt={'user photo'}/>
+            </S.TestimonyPhoto>
+            <S.TestimonyText>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </S.TestimonyText>
+            <S.TestimonyName>
+                @Karmani
+            </S.TestimonyName>
+        </div>
     );
 };
 
-const StyledSlider = styled.div`
-    
-`
-
-const Slide = styled.div`
-    
-`
-const TestimonyText = styled.p`
-    padding: 0 30px;
-    margin-bottom: 20px;
-    font-size: 18px;
-`
-const TestimonyName = styled.span`
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 700;
-`
-const TestimonyPhoto = styled.div`
-    img {
-        width: 98px;
-        height: 98px;
-        border-radius: 50%;
-        object-fit: cover;
-        top: 0
-    }
-    
-    position: absolute;
-    top: -49px;
-    left: 50%;
-    transform: translateX(-50%);
-`
