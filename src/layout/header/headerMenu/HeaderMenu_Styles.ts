@@ -18,7 +18,8 @@ const MobileMenuPopup = styled.div<{$isOpen: boolean}>`
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: rgba(60, 60, 60, 0.9);
+    //background-color: rgba(60, 60, 60, 0.9);
+    background-image: linear-gradient(#FDC435, #25282B);
     z-index: 20;
     display: none;
     

@@ -5,6 +5,7 @@ const SliderWrapper = styled.div`
     background-color: ${theme.colors.secondaryBg};
     border-radius: 24px;
     max-width: 500px;
+    width: 100%;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -24,28 +25,8 @@ const IconWrapper = styled.div`
     }
 `
 
-const Pagination = styled.div`
-    span {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        background-color: ${theme.colors.secondaryFont};
-        border-radius: 50%;
-    }
-
-    span.active {
-        background-color: ${theme.colors.accent};
-        width: 20px;
-        border-radius: 20px;
-    }
-    
-    span + span {
-        margin-left: 5px;
-    }
-`
 
 export const S = {
     SliderWrapper,
-    IconWrapper,
-    Pagination
+    IconWrapper
 }

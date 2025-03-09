@@ -4,24 +4,24 @@ import {S} from '../HeaderMenu_Styles.ts';
 
 export const MobileMenu: React.FC = () => {
 
-    const [isOpen, setIsOpen] = useState(false)
+    const [menuIsOpen, setMenuIsOpen] = useState(false)
 
     function handleClickBurgerButton() {
-        setIsOpen(!isOpen)
+        setMenuIsOpen(!menuIsOpen)
     }
-    function handleClickMenuItem(event: React.MouseEvent<HTMLDivElement>): void {
-        const element = event.target as HTMLElement;
-        if (element.tagName === 'A') {
-            setIsOpen(!isOpen)
-        }
-    }
+    // function handleClickMenuItem(event: React.MouseEvent<HTMLDivElement>): void {
+    //     const element = event.target as HTMLElement;
+    //     if (element.tagName === 'A') {
+    //         setMenuIsOpen(!menuIsOpen)
+    //     }
+    // }
 
     return (
         <nav>
-            <S.BurgerButton $isOpen={isOpen} onClick={handleClickBurgerButton} aria-haspopup>
+            <S.BurgerButton $isOpen={menuIsOpen} onClick={ handleClickBurgerButton } aria-haspopup>
                 <span></span>
             </S.BurgerButton>
-            <S.MobileMenuPopup $isOpen={isOpen} aria-modal onClick={handleClickMenuItem}>
+            <S.MobileMenuPopup $isOpen={menuIsOpen} aria-modal onClick={ () => { setMenuIsOpen(false) } }>
                 <Menu/>
             </S.MobileMenuPopup>
         </nav>

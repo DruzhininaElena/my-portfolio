@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
     }, []);
 
 
-    const [width, setWidth] = React.useState(window.innerWidth);
+    const [width, setWidth] = useState(window.innerWidth);
     const breakpoint = 768;
 
     React.useEffect(() => {

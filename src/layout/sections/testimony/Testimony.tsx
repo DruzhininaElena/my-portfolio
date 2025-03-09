@@ -21,11 +21,6 @@ export const Testimony: React.FC = () => {
                             <Icon iconId={'quote'} width={'30'} height={'30'} viewBox={'0 0 50 50'}/>
                         </S.IconWrapper>
                     </S.SliderWrapper>
-                    <S.Pagination>
-                        <span></span>
-                        <span className={'active'}></span>
-                        <span></span>
-                    </S.Pagination>
                 </FlexWrapper>
             </Container>
         </section>
