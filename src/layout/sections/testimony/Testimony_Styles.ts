@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const SliderWrapper = styled.div`
     background-color: ${theme.colors.secondaryBg};
     border-radius: 24px;
-    max-width: 500px;
+    max-width: 650px;
     width: 100%;
     padding: 20px;
     display: flex;

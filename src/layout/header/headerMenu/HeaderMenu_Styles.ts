@@ -21,12 +21,15 @@ const MobileMenuPopup = styled.div<{$isOpen: boolean}>`
     //background-color: rgba(60, 60, 60, 0.9);
     background-image: linear-gradient(#FDC435, #25282B);
     z-index: 20;
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    transition: 0.75s ease;
+    
     
     ${props => props.$isOpen && css<{$isOpen: boolean}>`
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        transform: translateY(0);
     `}
     
     ul {

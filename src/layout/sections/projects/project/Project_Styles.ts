@@ -4,10 +4,11 @@ import {Button} from '../../../../components/UI/button/Button.tsx';
 
 const StyledProject = styled.div`
     display: flex;
-    margin: 0 104px 80px;
+    margin: 0 auto 80px;
     border-radius: 24px;
     overflow: hidden;
     min-height: 524px;
+    max-width: 992px;
     
     box-shadow: 0 6px 64px 0 rgba(112, 144, 176, 0.1);
 
@@ -17,7 +18,7 @@ const StyledProject = styled.div`
     
     
     @media ${theme.media.desktopXl} {
-        margin: 0 0 80px 0;
+        max-width: 100%;
     }
 
     @media ${theme.media.tablet} {
