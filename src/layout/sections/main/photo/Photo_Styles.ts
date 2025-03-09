@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const PhotoWrapper = styled.div`
     width: 50%;
-    transform: translate(0, -28%);
+    transform: translate(8%, -28%);
 
     @media ${theme.media.desktopLg} {
         width: 60%;
@@ -19,7 +19,7 @@ const PhotoWrapper = styled.div`
     }
 
     @media ${theme.media.mobile} {
-        width: 100%;
+        width: 110%;
         transform: translate(0%, -20%);
     }
 `
