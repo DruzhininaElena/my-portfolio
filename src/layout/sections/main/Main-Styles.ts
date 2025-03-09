@@ -8,7 +8,6 @@ const StyledMain = styled.section`
     display: flex;
     flex-wrap: wrap;
     
-
     @media ${theme.media.desktopLg} {
         flex-direction: column-reverse;
         justify-content: flex-end;
@@ -33,11 +32,11 @@ const ContentWrapper = styled.div`
 
     @media ${theme.media.tablet} {
         padding: 0 30px;
+        margin-top: 20px;
     }
 
     @media ${theme.media.mobile} {
         padding: 0 15px;
-        margin-top: -15%;
     }
 `
 const Title = styled.h1`

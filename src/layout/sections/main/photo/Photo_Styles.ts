@@ -16,11 +16,12 @@ const PhotoWrapper = styled.div`
 
     @media ${theme.media.tablet} {
         width: 75%;
+        transform: translate(0, 0);
     }
 
     @media ${theme.media.mobile} {
-        width: 110%;
-        transform: translate(0%, -20%);
+        width: 100%;
+        
     }
 `
 
