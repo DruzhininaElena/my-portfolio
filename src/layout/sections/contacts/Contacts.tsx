@@ -8,7 +8,7 @@ import {PopupMessage} from '../../../components/popupMessage/PopupMessage.tsx';
 
 export const Contacts: React.FC = () => {
 
-    const [isShowPopupSuccess, setIsShowPopupSuccess] = useState(false)
+    const [isShowPopupSuccess, setIsShowPopupSuccess] = useState(true)
     const [isShowPopupFailed, setIsShowPopupFailed] = useState(false)
 
     const form = useRef<HTMLFormElement>(null);
