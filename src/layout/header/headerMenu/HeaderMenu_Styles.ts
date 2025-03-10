@@ -13,39 +13,64 @@ const MenuList = styled.ul`
 `
 
 const NavLink = styled.a`
-    background-image: linear-gradient(
-            to right,
-            ${theme.colors.secondaryFont},
-            ${theme.colors.secondaryFont} 50%,
-            #000 50%
-    );
-    background-size: 200% 100%;
-    background-position: -100%;
-    display: inline-block;
-    padding: 5px 0;
-    position: relative;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.25s ease-in-out;
+    // background-image: linear-gradient(
+    //         to right,
+    //         ${theme.colors.accent},
+    //         ${theme.colors.accent} 50%,
+    //         #000 50%
+    // );
+    // background-size: 200% 100%;
+    // background-position: -100%;
+    // display: inline-block;
+    // padding: 5px 0;
+    // position: relative;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    // transition: all 0.25s ease-in-out;
+    //
+    // &::before {
+    //     content: '';
+    //     background-color: ${theme.colors.secondaryFont};
+    //     display: block;
+    //     position: absolute;
+    //     bottom: -2px;
+    //     left: 0;
+    //     width: 0;
+    //     height: 3px;
+    //     transition: all 0.25s ease-in-out;
+    // }
+    //
+    // &:hover, &.active {
+    //     background-position: 0;
+    // }
+    //
+    // &:hover::before, &.active::before {
+    //     width: 100%;
+    // }
+
+    
+        
+        position: relative;
+        text-decoration: none;
+    
 
     &::before {
         content: '';
-        background-color: ${theme.colors.secondaryFont};
-        display: block;
         position: absolute;
-        bottom: -3px;
+        width: 100%;
+        height: 2px;
+        border-radius: 2px;
+        background-color: ${theme.colors.primaryFont};
+        bottom: -4px;
         left: 0;
-        width: 0;
-        height: 3px;
-        transition: all 0.25s ease-in-out;
-    }
-
-    &:hover, &.active {
-        background-position: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;
     }
 
     &:hover::before, &.active::before {
-        width: 100%;
+        transform-origin: left;
+        transform: scaleX(1);
     }
 `
 
@@ -82,12 +107,6 @@ const MobileMenuPopup = styled.div<{$isOpen: boolean}>`
         }
         li {
             ${NavLink} {
-                background-image: linear-gradient(
-                        to right,
-                        ${theme.colors.primaryBg},
-                        ${theme.colors.primaryBg} 50%,
-                        #000 50%
-                );
                 &::before {
                     background-color: ${theme.colors.primaryBg};
                 }
