@@ -65,7 +65,7 @@ const NavLink = styled.a`
         left: 0;
         transform-origin: right;
         transform: scaleX(0);
-        transition: transform .3s ease-in-out;
+        transition: transform .25s ease-in-out;
     }
 
     &:hover::before, &.active::before {

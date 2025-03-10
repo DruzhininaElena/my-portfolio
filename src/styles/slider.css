@@ -17,6 +17,8 @@
     height: 10px;
     background-color: #828282;
     border-radius: 50%;
+
+    transition: 0.1s ease-in-out;
 }
 
 .alice-carousel__dots-item:not(.__custom):hover {
