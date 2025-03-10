@@ -1,11 +1,15 @@
 import {SectionTitle} from '../../../components/sectionTitle/SectionTitle.tsx';
 import {Button} from '../../../components/UI/button/Button.tsx';
 import {Container} from '../../../components/container/Container.ts';
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import {S} from './Contacts_Styles.ts';
 import emailjs from '@emailjs/browser';
+import {PopupMessage} from '../../../components/popupMessage/PopupMessage.tsx';
 
 export const Contacts: React.FC = () => {
+
+    const [isShowPopupSuccess, setIsShowPopupSuccess] = useState(false)
+    const [isShowPopupFailed, setIsShowPopupFailed] = useState(false)
 
     const form = useRef<HTMLFormElement>(null);
 
@@ -21,9 +25,13 @@ export const Contacts: React.FC = () => {
             .then(
                 () => {
                     console.log('SUCCESS!');
+                    setIsShowPopupSuccess(true)
+                    setTimeout(() => {setIsShowPopupSuccess(false)}, 3000)
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
+                    setIsShowPopupFailed(true)
+                    setTimeout(() => {setIsShowPopupFailed(false)}, 3000)
                 },
             );
 
@@ -50,6 +58,8 @@ export const Contacts: React.FC = () => {
                     <Button as={'button'} type={'submit'}>Send</Button>
                 </S.StyledForm>
             </Container>
+            {isShowPopupSuccess && <PopupMessage text={'Your message has been sent successfully'}/>}
+            {isShowPopupFailed && <PopupMessage text={'Error! Your message was not sent.'} bgColor={'#ffb0c4'}/>}
         </S.StyledContacts>
     );
 }
