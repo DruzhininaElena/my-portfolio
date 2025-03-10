@@ -6,7 +6,7 @@ const PopupMessageStyled = styled.div<{$bgColor?: string}>`
     right: 40px;
     padding: 10px;
     z-index: 500;
-    background-color: ${props => props.$bgColor || '#c3fbcf'};
+    background-color: ${props => props.$bgColor || 'rgba(101,253,138,0.5)'};
     border-radius: 10px;
     min-height: 20px;
     width: 200px;

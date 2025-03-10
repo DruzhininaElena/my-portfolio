@@ -59,7 +59,7 @@ export const Contacts: React.FC = () => {
                 </S.StyledForm>
             </Container>
             {isShowPopupSuccess && <PopupMessage text={'Your message has been sent successfully'}/>}
-            {isShowPopupFailed && <PopupMessage text={'Error! Your message was not sent.'} bgColor={'#ffb0c4'}/>}
+            {isShowPopupFailed && <PopupMessage text={'Error! Your message was not sent.'} bgColor={'rgba(253,130,165,0.5)'}/>}
         </S.StyledContacts>
     );
 }
