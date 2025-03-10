@@ -138,6 +138,12 @@ Error generating stack: `+n.message+`
                 &::before {
                     background-color: ${st.colors.primaryBg};
                 }
+                &:hover {
+                    background-position: -100%;
+                }
+                &:hover::before {
+                    width: 0;
+                }
             }
         }
     }
