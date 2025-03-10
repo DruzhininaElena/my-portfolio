@@ -4,7 +4,7 @@ import React from 'react';
 
 export const Logo: React.FC = () => {
     return (
-        <S.StyledLogo href={'#main'}>
+        <S.StyledLogo href={'#about'}>
             <Icon iconId={'logo'} viewBox={'0 -2 50 50'} height={'50'} width={'50'}/>
         </S.StyledLogo>
     );

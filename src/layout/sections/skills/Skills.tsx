@@ -7,7 +7,7 @@ import React from 'react';
 
 export const Skills: React.FC = () => {
     return (
-        <S.StyledSkills>
+        <S.StyledSkills id={'skills'}>
             <Container>
                 <SectionTitle title={'Skills'}/>
                 <S.GridWrapper>

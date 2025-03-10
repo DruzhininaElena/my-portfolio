@@ -12,13 +12,51 @@ const MenuList = styled.ul`
     color: ${theme.colors.primaryFont};
 `
 
+const NavLink = styled.a`
+    background-image: linear-gradient(
+            to right,
+            ${theme.colors.secondaryFont},
+            ${theme.colors.secondaryFont} 50%,
+            #000 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.25s ease-in-out;
+
+    &::before {
+        content: '';
+        background-color: ${theme.colors.secondaryFont};
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        transition: all 0.25s ease-in-out;
+    }
+
+    &:hover, &.active {
+        background-position: 0;
+    }
+
+    &:hover::before, &.active::before {
+        width: 100%;
+    }
+`
+
+// mobile--------------------------------------------------------------------------------
+
 const MobileMenuPopup = styled.div<{$isOpen: boolean}>`
     position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    //background-color: rgba(60, 60, 60, 0.9);
     background-image: linear-gradient(#FDC435, #25282B);
     z-index: 20;
     display: flex;
@@ -41,6 +79,19 @@ const MobileMenuPopup = styled.div<{$isOpen: boolean}>`
 
         @media ${theme.media.mobile} {
             font-size: 28px;
+        }
+        li {
+            ${NavLink} {
+                background-image: linear-gradient(
+                        to right,
+                        ${theme.colors.primaryBg},
+                        ${theme.colors.primaryBg} 50%,
+                        #000 50%
+                );
+                &::before {
+                    background-color: ${theme.colors.primaryBg};
+                }
+            }
         }
     }
 
@@ -133,6 +184,7 @@ const BurgerButton = styled.div<{$isOpen: boolean}>`
 
 export const S = {
     MenuList,
+    NavLink,
     MobileMenuPopup,
     BurgerButton
 }

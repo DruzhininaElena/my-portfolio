@@ -7,11 +7,11 @@ const StyledMain = styled.section`
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    padding-top: 0;
     
     @media ${theme.media.desktopLg} {
         flex-direction: column-reverse;
         justify-content: flex-end;
-        margin-bottom: 144px;
     }
 `
 const ContentWrapper = styled.div`
@@ -48,6 +48,10 @@ const Title = styled.h1`
     @media ${theme.media.desktopXl} {
         width: 100%;
         margin-top: 0;
+    }
+    
+    p {
+        display: none;
     }
 `
 

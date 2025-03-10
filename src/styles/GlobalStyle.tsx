@@ -21,6 +21,10 @@ export const GlobalStyle = createGlobalStyle`
         color: #fff;
     }
     
+    html {
+        scroll-behavior: smooth;
+    }
+    
     
     body {
         font-family: 'Nunito', Helvetica, Arial, sans-serif;
@@ -30,6 +34,7 @@ export const GlobalStyle = createGlobalStyle`
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
+        
     }
 
     button {
@@ -43,9 +48,14 @@ export const GlobalStyle = createGlobalStyle`
     ul li {
         list-style: none;
     }
-    
+
     section {
-        margin-bottom: 144px;
+        //margin-bottom: 144px;
+        padding-top: 144px;
+        
+        @media ${theme.media.mobile} {
+            padding-top: 80px;
+        }
     }
 
     img {

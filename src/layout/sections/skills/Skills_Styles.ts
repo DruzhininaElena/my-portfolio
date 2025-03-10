@@ -2,7 +2,6 @@ import {theme} from '../../../styles/Theme.ts';
 import styled from 'styled-components';
 
 const StyledSkills = styled.section`
-    margin-bottom: 144px;
 `
 
 const GridWrapper = styled.div`
