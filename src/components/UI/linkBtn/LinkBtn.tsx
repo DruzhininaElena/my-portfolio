@@ -5,7 +5,7 @@ type ButtonPropsType = {
     $outlined?: boolean
 }
 
-export const Button = styled.a<ButtonPropsType>`
+export const LinkBtn = styled.a<ButtonPropsType>`
     border-radius: 8px;
     background-color: ${theme.colors.accent};
     padding: 8px 24px;
@@ -13,15 +13,15 @@ export const Button = styled.a<ButtonPropsType>`
     font-weight: 500;
     font-size: 18px;
     line-height: 1.5;
-    
+
     &:hover {
         opacity: 0.8;
     }
-    
-    ${props=> props.$outlined && css<ButtonPropsType>`
+
+    ${props => props.$outlined && css<ButtonPropsType>`
         border: 2px solid ${theme.colors.primaryFont};
         background-color: transparent;
         padding-top: 6px;
     `}
-    
+
 `

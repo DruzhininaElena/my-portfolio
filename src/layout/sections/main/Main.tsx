@@ -1,4 +1,4 @@
-import {Button} from '../../../components/UI/button/Button.tsx';
+import {LinkBtn} from '../../../components/UI/linkBtn/LinkBtn.tsx';
 import {Photo} from './photo/Photo.tsx';
 import {S} from './Main-Styles.ts';
 import React from 'react';
@@ -24,8 +24,8 @@ export const Main: React.FC = () => {
                     information on the about page.
                 </S.Description>
                 <S.ButtonsWrapper>
-                    <Button href={'#projects'}>Projects</Button>
-                    <Button href={'#'} $outlined>LinkedIn</Button>
+                    <LinkBtn href={'#projects'}>Projects</LinkBtn>
+                    <LinkBtn href={'#'} $outlined>LinkedIn</LinkBtn>
                 </S.ButtonsWrapper>
             </S.ContentWrapper>
             <Photo/>

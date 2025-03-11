@@ -1,4 +1,4 @@
-import {Button} from '../../../../components/UI/button/Button.tsx';
+import {LinkBtn} from '../../../../components/UI/linkBtn/LinkBtn.tsx';
 import {S} from './Project_Styles.ts';
 import React from 'react';
 
@@ -14,17 +14,17 @@ type ProjectPropsType = {
 export const Project: React.FC<ProjectPropsType> = ({title, description, imageSrc, imageSrcWebp}: ProjectPropsType) => {
     return (
         <S.StyledProject>
-            <S.ProjectContent>
-                <S.ContentWrapper>
-                    <S.ProjectTitle>{title}</S.ProjectTitle>
-                    <S.ProjectDescription>{description}</S.ProjectDescription>
-                    <Button href='#' $outlined>View Project</Button>
-                </S.ContentWrapper>
-            </S.ProjectContent>
             <S.ProjectImg>
                 <source srcSet={imageSrcWebp} type={'image/webp'}/>
                 <img src={imageSrc} alt="project photo"/>
             </S.ProjectImg>
+            <S.ProjectContent>
+                <S.ContentWrapper>
+                    <S.ProjectTitle>{title}</S.ProjectTitle>
+                    <S.ProjectDescription>{description}</S.ProjectDescription>
+                    <LinkBtn href='#' $outlined>Project</LinkBtn>
+                </S.ContentWrapper>
+            </S.ProjectContent>
         </S.StyledProject>
     );
 }

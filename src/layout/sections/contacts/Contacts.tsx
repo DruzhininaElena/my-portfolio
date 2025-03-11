@@ -1,5 +1,5 @@
 import {SectionTitle} from '../../../components/sectionTitle/SectionTitle.tsx';
-import {Button} from '../../../components/UI/button/Button.tsx';
+import {LinkBtn} from '../../../components/UI/linkBtn/LinkBtn.tsx';
 import {Container} from '../../../components/container/Container.ts';
 import React, {useRef, useState} from 'react';
 import {S} from './Contacts_Styles.ts';
@@ -55,7 +55,7 @@ export const Contacts: React.FC = () => {
                         <S.FieldLabel htmlFor={'message'}>Message</S.FieldLabel>
                         <S.Field as="textarea" id="message" name={'message'} required/>
                     </S.FieldWrapper>
-                    <Button as={'button'} type={'submit'}>Send</Button>
+                    <LinkBtn as={'button'} type={'submit'}>Send</LinkBtn>
                 </S.StyledForm>
             </Container>
             {isShowPopupSuccess && <PopupMessage text={'Your message has been sent successfully'}/>}

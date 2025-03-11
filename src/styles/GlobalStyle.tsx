@@ -44,6 +44,7 @@ export const GlobalStyle = createGlobalStyle`
     a, a:visited, a:hover{
         text-decoration: none;
         color: inherit;
+        cursor: pointer;
     }
     ul li {
         list-style: none;
