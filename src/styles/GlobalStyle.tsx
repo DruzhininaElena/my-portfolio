@@ -50,11 +50,11 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     section {
-        //margin-bottom: 144px;
-        padding-top: 144px;
-        
+        padding-top: 80px;
+        margin-top: 64px;
         @media ${theme.media.mobile} {
             padding-top: 80px;
+            margin-top: 0;
         }
     }
 
