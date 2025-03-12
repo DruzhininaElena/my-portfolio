@@ -9,7 +9,7 @@ import {PopupMessage} from '../../../components/popupMessage/PopupMessage.tsx';
 export const Contacts: React.FC = () => {
 
     const [isShowPopupSuccess, setIsShowPopupSuccess] = useState(false)
-    const [isShowPopupFailed, setIsShowPopupFailed] = useState(false)
+    const [isShowPopupError, setIsShowPopupError] = useState(false)
 
     const form = useRef<HTMLFormElement>(null);
 
@@ -26,12 +26,16 @@ export const Contacts: React.FC = () => {
                 () => {
                     console.log('SUCCESS!');
                     setIsShowPopupSuccess(true)
-                    setTimeout(() => {setIsShowPopupSuccess(false)}, 3000)
+                    setTimeout(() => {
+                        setIsShowPopupSuccess(false)
+                    }, 3000)
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
-                    setIsShowPopupFailed(true)
-                    setTimeout(() => {setIsShowPopupFailed(false)}, 3000)
+                    setIsShowPopupError(true)
+                    setTimeout(() => {
+                        setIsShowPopupError(false)
+                    }, 3000)
                 },
             );
 
@@ -58,8 +62,22 @@ export const Contacts: React.FC = () => {
                     <LinkBtn as={'button'} type={'submit'}>Send</LinkBtn>
                 </S.StyledForm>
             </Container>
-            {isShowPopupSuccess && <PopupMessage text={'Your message has been sent successfully'}/>}
-            {isShowPopupFailed && <PopupMessage text={'Error! Your message was not sent.'} bgColor={'rgba(253,130,165,0.5)'}/>}
+            {isShowPopupSuccess && <PopupMessage response={'success'}
+                                                 text={'Your message has been sent'}
+                                                 viewBox={'0 -2 14 14'}
+                                                 iconId={'success'}
+                                                 closePopup={() => setIsShowPopupSuccess(false)}
+                                    />
+            }
+            {isShowPopupError && <PopupMessage response={'error'}
+                                               text={'Your message was not sent'}
+                                               bgColor={'#ffecf4'}
+                                               color={'#83080f'}
+                                               viewBox={'0 -2 24 24'}
+                                               iconId={'error'}
+                                               closePopup={() => setIsShowPopupError(false)}
+            />
+            }
         </S.StyledContacts>
     );
 }
