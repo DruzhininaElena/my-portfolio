@@ -1,6 +1,8 @@
 import {theme} from '../../../styles/Theme.ts';
 import styled from 'styled-components';
 
+const StyledTestimony = styled.section``
+
 const SliderWrapper = styled.div`
     background-color: ${theme.colors.secondaryBg};
     border-radius: 24px;
@@ -27,6 +29,7 @@ const IconWrapper = styled.div`
 
 
 export const S = {
+    StyledTestimony,
     SliderWrapper,
     IconWrapper
 }

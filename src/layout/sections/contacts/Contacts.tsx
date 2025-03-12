@@ -1,5 +1,5 @@
 import {SectionTitle} from '../../../components/sectionTitle/SectionTitle.tsx';
-import {Button} from '../../../components/UI/button/Button.tsx';
+import {LinkBtn} from '../../../components/UI/linkBtn/LinkBtn.tsx';
 import {Container} from '../../../components/container/Container.ts';
 import React, {useRef, useState} from 'react';
 import {S} from './Contacts_Styles.ts';
@@ -9,7 +9,7 @@ import {PopupMessage} from '../../../components/popupMessage/PopupMessage.tsx';
 export const Contacts: React.FC = () => {
 
     const [isShowPopupSuccess, setIsShowPopupSuccess] = useState(false)
-    const [isShowPopupFailed, setIsShowPopupFailed] = useState(false)
+    const [isShowPopupError, setIsShowPopupError] = useState(false)
 
     const form = useRef<HTMLFormElement>(null);
 
@@ -26,12 +26,16 @@ export const Contacts: React.FC = () => {
                 () => {
                     console.log('SUCCESS!');
                     setIsShowPopupSuccess(true)
-                    setTimeout(() => {setIsShowPopupSuccess(false)}, 3000)
+                    setTimeout(() => {
+                        setIsShowPopupSuccess(false)
+                    }, 3000)
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
-                    setIsShowPopupFailed(true)
-                    setTimeout(() => {setIsShowPopupFailed(false)}, 3000)
+                    setIsShowPopupError(true)
+                    setTimeout(() => {
+                        setIsShowPopupError(false)
+                    }, 3000)
                 },
             );
 
@@ -55,11 +59,25 @@ export const Contacts: React.FC = () => {
                         <S.FieldLabel htmlFor={'message'}>Message</S.FieldLabel>
                         <S.Field as="textarea" id="message" name={'message'} required/>
                     </S.FieldWrapper>
-                    <Button as={'button'} type={'submit'}>Send</Button>
+                    <LinkBtn as={'button'} type={'submit'}>Send</LinkBtn>
                 </S.StyledForm>
             </Container>
-            {isShowPopupSuccess && <PopupMessage text={'Your message has been sent successfully'}/>}
-            {isShowPopupFailed && <PopupMessage text={'Error! Your message was not sent.'} bgColor={'rgba(253,130,165,0.5)'}/>}
+            {isShowPopupSuccess && <PopupMessage response={'success'}
+                                                 text={'Your message has been sent'}
+                                                 viewBox={'0 -2 14 14'}
+                                                 iconId={'success'}
+                                                 closePopup={() => setIsShowPopupSuccess(false)}
+                                    />
+            }
+            {isShowPopupError && <PopupMessage response={'error'}
+                                               text={'Your message was not sent'}
+                                               bgColor={'#ffecf4'}
+                                               color={'#83080f'}
+                                               viewBox={'0 -2 24 24'}
+                                               iconId={'error'}
+                                               closePopup={() => setIsShowPopupError(false)}
+            />
+            }
         </S.StyledContacts>
     );
 }

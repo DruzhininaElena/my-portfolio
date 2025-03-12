@@ -13,47 +13,9 @@ const MenuList = styled.ul`
 `
 
 const NavLink = styled.a`
-    // background-image: linear-gradient(
-    //         to right,
-    //         ${theme.colors.accent},
-    //         ${theme.colors.accent} 50%,
-    //         #000 50%
-    // );
-    // background-size: 200% 100%;
-    // background-position: -100%;
-    // display: inline-block;
-    // padding: 5px 0;
-    // position: relative;
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
-    // transition: all 0.25s ease-in-out;
-    //
-    // &::before {
-    //     content: '';
-    //     background-color: ${theme.colors.secondaryFont};
-    //     display: block;
-    //     position: absolute;
-    //     bottom: -2px;
-    //     left: 0;
-    //     width: 0;
-    //     height: 3px;
-    //     transition: all 0.25s ease-in-out;
-    // }
-    //
-    // &:hover, &.active {
-    //     background-position: 0;
-    // }
-    //
-    // &:hover::before, &.active::before {
-    //     width: 100%;
-    // }
-
+    position: relative;
+    text-decoration: none;
     
-        
-        position: relative;
-        text-decoration: none;
-    
-
     &::before {
         content: '';
         position: absolute;

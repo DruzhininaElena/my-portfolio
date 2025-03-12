@@ -2,9 +2,8 @@ import {theme} from '../../../styles/Theme.ts';
 import styled from 'styled-components';
 
 const StyledMain = styled.section`
-    margin: -80px auto 0;
+    margin: -80px auto -10%;
     max-width: 1440px;
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     padding-top: 0;
@@ -12,12 +11,19 @@ const StyledMain = styled.section`
     @media ${theme.media.desktopLg} {
         flex-direction: column-reverse;
         justify-content: flex-end;
+        margin-bottom: 0;
     }
+
+    @media ${theme.media.tablet} {
+        overflow: clip;
+    }
+    
 `
 const ContentWrapper = styled.div`
     width: 50%;
     margin-top: 135px;
     padding: 0 92px 0 120px;
+    position: relative;
 
     @media ${theme.media.desktopXl} {
         padding-left: 90px;
@@ -32,7 +38,7 @@ const ContentWrapper = styled.div`
 
     @media ${theme.media.tablet} {
         padding: 0 30px;
-        margin-top: 20px;
+        //margin-top: 20px;
     }
 
     @media ${theme.media.mobile} {
