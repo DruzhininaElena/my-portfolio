@@ -11,6 +11,12 @@ const GridWrapper = styled.div`
     gap: 74px 0;
     justify-items: center;
     
+
+    svg {
+        width: 100px;height: 100px;
+    }
+    
+    
     @media ${theme.media.desktopXl} {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -20,9 +26,6 @@ const GridWrapper = styled.div`
     @media ${theme.media.mobile} {
         grid-template-columns: repeat(2, 1fr);
         gap: 50px 0;
-        svg {
-            width: 100px;height: 100px;
-        }
     }
 `
 

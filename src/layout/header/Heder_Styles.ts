@@ -11,7 +11,8 @@ const Header = styled.header<{$isPageScrolled: boolean}>`
     z-index: 10;
 
     ${props => props.$isPageScrolled && css<{$isPageScrolled: boolean}>`
-        background-color: rgba(255, 255, 255, 0.75)
+        background-color: rgb(255, 255, 255);
+        border-bottom: 1px solid #E8ECF4;
     `}
 `
 

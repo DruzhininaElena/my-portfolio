@@ -39,7 +39,7 @@ const StyledTabMenu = styled.nav`
    ul {
        display: flex;
        justify-content: space-between;
-       max-width: 300px;
+       max-width: 250px;
        margin: 0 auto 40px;
        text-transform: uppercase;
        font-weight: 600;

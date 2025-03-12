@@ -5,13 +5,11 @@ import {Projects} from './layout/sections/projects/Projects.tsx';
 import {Testimony} from './layout/sections/testimony/Testimony.tsx';
 import {Contacts} from './layout/sections/contacts/Contacts.tsx';
 import {Footer} from './layout/footer/Footer.tsx';
-// import {Particle} from './components/particle/Particle.tsx';
 
 
 function App() {
     return (
         <>
-            {/*<Particle/>*/}
             <Header/>
             <Main/>
             <Skills/>

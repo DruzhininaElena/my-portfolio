@@ -6,22 +6,15 @@ const StyledProject = styled.div`
     overflow: hidden;
     background-color: ${theme.colors.secondaryBg};
     box-shadow: 0 6px 64px 0 rgba(112, 144, 176, 0.1);
+    height: 100%;
 
     @media ${theme.media.tablet} {
         max-width: 500px;
     }
-    
 `
 
-
-
 const ProjectContent = styled.div`
-    
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
 `
 
 const ContentWrapper = styled.div`
@@ -39,14 +32,11 @@ const ProjectDescription = styled.p`
     margin: 24px 0 30px;
 `
 
-const ProjectImg = styled.picture`
+const ProjectImg = styled.img`
     width: 100%;
     display: block;
-    source, img {
-        object-fit: cover;
-        width: 100%;
-        max-height: 250px;
-    }
+    object-fit: cover;
+    max-height: 250px;
 `
 
 export const S = {

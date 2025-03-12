@@ -4,8 +4,8 @@ import {projectsData, tabItems, tabStatusType} from './ProjectsData.ts';
 import {Container} from '../../../components/container/Container.ts';
 import React, {useState} from 'react';
 import {S} from './Projects_Styles.ts';
-// import {FlexWrapper} from '../../../components/FlexWrapper.ts';
 import {TabMenu} from './tabMenu/TabMenu.tsx';
+import {AnimatePresence, motion } from "motion/react"
 
 export const Projects: React.FC = () => {
 
@@ -26,7 +26,23 @@ export const Projects: React.FC = () => {
                 <SectionTitle title={'Projects'}/>
                 <TabMenu tabItems={tabItems} changeFilterStatus={changeFilterStatus}/>
                 <S.ProjectsWrapper >
-                    {filteredProjects.map((proj) => <Project {...proj} key={proj.id}/>)}
+                    <AnimatePresence>
+                        {filteredProjects.map((proj) => {
+                            return (
+                                <motion.article
+                                    key={proj.id}
+                                    initial={{opacity: 0}}
+                                    animate={{opacity: 1}}
+                                    exit={{opacity: 0}}
+                                    layout
+                                >
+                                    <Project {...proj}
+                                             key={proj.id}
+                                    />
+                                </motion.article>
+                            )
+                        })}
+                    </AnimatePresence>
                 </S.ProjectsWrapper>
             </Container>
         </S.StyledProjects>

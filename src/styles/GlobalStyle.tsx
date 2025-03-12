@@ -53,8 +53,7 @@ export const GlobalStyle = createGlobalStyle`
     section {
         padding-top: 80px;
         margin-top: 64px;
-        @media ${theme.media.mobile} {
-            padding-top: 80px;
+        @media ${theme.media.tablet} {
             margin-top: 0;
         }
     }

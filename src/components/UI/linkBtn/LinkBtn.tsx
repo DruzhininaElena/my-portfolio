@@ -13,6 +13,7 @@ export const LinkBtn = styled.a<ButtonPropsType>`
     font-weight: 500;
     font-size: 18px;
     line-height: 1.5;
+    white-space: nowrap;
 
     &:hover {
         opacity: 0.8;

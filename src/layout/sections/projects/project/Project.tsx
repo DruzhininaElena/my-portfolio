@@ -6,18 +6,14 @@ type ProjectPropsType = {
     title: string;
     description: string,
     imageSrc: string,
-    imageSrcWebp: string,
     directionContent?: string
 
 }
 
-export const Project: React.FC<ProjectPropsType> = ({title, description, imageSrc, imageSrcWebp}: ProjectPropsType) => {
+export const Project: React.FC<ProjectPropsType> = ({title, description, imageSrc}: ProjectPropsType) => {
     return (
         <S.StyledProject>
-            <S.ProjectImg>
-                <source srcSet={imageSrcWebp} type={'image/webp'}/>
-                <img src={imageSrc} alt="project photo"/>
-            </S.ProjectImg>
+            <S.ProjectImg src={imageSrc} alt="project photo"/>
             <S.ProjectContent>
                 <S.ContentWrapper>
                     <S.ProjectTitle>{title}</S.ProjectTitle>

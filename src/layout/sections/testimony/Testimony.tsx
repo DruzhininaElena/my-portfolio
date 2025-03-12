@@ -8,7 +8,7 @@ import React from 'react';
 
 export const Testimony: React.FC = () => {
     return (
-        <section id={'testimony'}>
+        <S.StyledTestimony id={'testimony'}>
             <Container>
                 <FlexWrapper $direction={'column'} $align={'center'}>
                     <SectionTitle title={'Testimony'}/>
@@ -23,6 +23,6 @@ export const Testimony: React.FC = () => {
                     </S.SliderWrapper>
                 </FlexWrapper>
             </Container>
-        </section>
+        </S.StyledTestimony>
     );
 }
