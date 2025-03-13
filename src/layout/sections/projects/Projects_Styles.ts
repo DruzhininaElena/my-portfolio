@@ -10,7 +10,7 @@ const ProjectsWrapper = styled.div`
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
 
-    @media ${theme.media.desktopLg} {
+    @media ${theme.media.desktopXl} {
         grid-template-columns: repeat(2, 1fr);
     }
 

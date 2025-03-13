@@ -1,3 +1,6 @@
+import calculator from '../../../assets/images/projects/calculator.webp';
+import topMovies from '../../../assets/images/projects/top-movies.webp';
+import todo from '../../../assets/images/projects/todo.webp';
 import imageProject1Webp from '../../../assets/images/projects/project1.webp';
 import imageProject2Webp from '../../../assets/images/projects/project2.webp';
 import imageProject3Webp from '../../../assets/images/projects/project3.webp';
@@ -7,30 +10,38 @@ type projectDataType = {
     title: string;
     description: string;
     imageSrc: string;
-    type: string
+    type: string;
+    projectSrc?: string;
+    gitHubSrc?: string
 
 }
 export const projectsData: projectDataType[] = [
     {
         id: 1,
-        title: 'Project Name1',
-        description: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
-        imageSrc: imageProject1Webp,
-        type: 'vue'
+        title: 'IMDB Top 250',
+        description: 'The application fetches data from the IMDb API, showcasing essential details such as film titles, release years, ratings, directors, and brief plot descriptions. ',
+        imageSrc: topMovies,
+        type: 'vue',
+        projectSrc: 'https://druzhininaelena.github.io/top-movies-app/',
+        gitHubSrc: 'https://github.com/DruzhininaElena/top-movies-app'
     },
     {
         id: 2,
-        title: 'Project Name2',
-        description: 'What was your role, your deliverables, if the project was personal, freelancing.',
-        imageSrc: imageProject2Webp,
-        type: 'vue'
+        title: 'TODO-app',
+        description: 'A Todo List app in JavaScript is a simple web application that helps users create, manage, and track their tasks.',
+        imageSrc: todo,
+        type: 'js',
+        projectSrc: 'https://druzhininaelena.github.io/todo/',
+        gitHubSrc: 'https://github.com/DruzhininaElena/todo',
     },
     {
         id: 3,
-        title: 'Project Name3',
-        description: 'You can also add in this description the type of the project, if it was for web, mobile, electron.',
-        imageSrc: imageProject3Webp,
-        type: 'react'
+        title: 'Calculator-app',
+        description: 'This is a simple web application that allows users to perform basic mathematical operations such as addition, subtraction, multiplication, and division.',
+        imageSrc: calculator,
+        type: 'vue',
+        projectSrc: 'https://druzhininaelena.github.io/calculator-app/',
+        gitHubSrc: 'https://github.com/DruzhininaElena/calculator-app'
     },
     {
         id: 4,
@@ -44,7 +55,7 @@ export const projectsData: projectDataType[] = [
         title: 'Project Name2',
         description: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
         imageSrc: imageProject2Webp,
-        type: 'vue'
+        type: 'react'
     },
     {
         id: 6,
@@ -55,7 +66,7 @@ export const projectsData: projectDataType[] = [
     }
 ]
 
-export type tabStatusType = 'all' | 'vue' | 'react'
+export type tabStatusType = 'all' | 'vue' | 'react' | 'js'
 
 export type tabItemsType = {
     id: number;
@@ -79,5 +90,10 @@ export const tabItems: tabItemsType[] = [
         id: 3,
         title: 'Vue',
         status: 'vue'
+    },
+    {
+        id: 4,
+        title: 'JS',
+        status: 'js'
     }
 ]

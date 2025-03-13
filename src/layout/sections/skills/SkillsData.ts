@@ -40,8 +40,8 @@ export const SkillsData: SkillDataType[] = [
         viewBox: '6 6 108 108'
     },
     {
-        iconId: 'vscode',
-        viewBox: '3 0 105 105'
+        iconId: 'vue',
+        viewBox: '2 2 28 28'
     },
     {
         iconId: 'webstorm',

@@ -7,9 +7,15 @@ const StyledProject = styled.div`
     background-color: ${theme.colors.secondaryBg};
     box-shadow: 0 6px 64px 0 rgba(112, 144, 176, 0.1);
     height: 100%;
+    transition: .2s ease-in-out;
 
     @media ${theme.media.tablet} {
         max-width: 500px;
+    }
+    
+    &:hover {
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.7);
+        transform: scale(1.01);
     }
 `
 
@@ -36,7 +42,7 @@ const ProjectImg = styled.img`
     width: 100%;
     display: block;
     object-fit: cover;
-    max-height: 250px;
+    height: 250px;
 `
 
 export const S = {

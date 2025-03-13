@@ -12,7 +12,7 @@ const PopupMessageStyled = styled.div<{$bgColor?: string, $color?: string}>`
     width: 300px;
     color: ${props => props.$color || '#047804'};
     box-shadow: 0 5px 5px 0 rgba(11, 9, 9, 0.1);
-    
+    cursor: pointer;
    
     
     &::before {

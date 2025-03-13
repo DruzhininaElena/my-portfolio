@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import styled from 'styled-components';
 import {tabItemsType, tabStatusType} from '../ProjectsData.ts';
-import {theme} from '../../../../styles/Theme.ts';
+import {S} from './TabsMenu_Styles.ts';
 
 type TabMenuPropsType = {
     tabItems: tabItemsType[];
@@ -17,41 +16,22 @@ export const TabMenu: React.FC<TabMenuPropsType> = ({ tabItems, changeFilterStat
 
     return (
 
-        <StyledTabMenu>
+        <S.StyledTabMenu>
             <ul>
                 {tabItems.map((tab) =>
-                    <TabItem key={tab.id}>
-                        <LinkTab onClick={() => {
+                    <S.TabItem key={tab.id}>
+                        <S.LinkTab onClick={() => {
                             changeActiveIndex(tab.id);
                             changeFilterStatus(tab.status)
                         }}
                                  className={activeIndex === tab.id ? 'active' : ''}>
                             {tab.title}
-                        </LinkTab>
-                    </TabItem>
+                        </S.LinkTab>
+                    </S.TabItem>
                 )}
             </ul>
-        </StyledTabMenu>
+        </S.StyledTabMenu>
     );
 };
 
-const StyledTabMenu = styled.nav`
-   ul {
-       display: flex;
-       justify-content: space-between;
-       max-width: 250px;
-       margin: 0 auto 40px;
-       text-transform: uppercase;
-       font-weight: 600;
-       font-size: 20px;
-   }
-`
 
-const TabItem = styled.li``
-
-const LinkTab = styled.a`
-    &.active {
-        color: ${theme.colors.accent};
-        font-weight: 700;
-    }
-`

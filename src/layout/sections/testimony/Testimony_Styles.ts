@@ -11,7 +11,7 @@ const SliderWrapper = styled.div`
     padding: 20px;
     display: flex;
     flex-direction: column;
-    margin: 49px 0 40px;
+    margin-bottom: 40px;
 
     box-shadow: 0 6px 64px 0 rgba(112, 144, 176, 0.1);
 

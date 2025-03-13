@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
         <S.StyledFooter>
                 <FlexWrapper $direction={'column'} $align={'center'}>
                     <Social/>
-                    <S.Copyright>Madelyn Torff 2021 </S.Copyright>
+                    <S.Copyright>© Elena Druzhinina, 2025</S.Copyright>
                 </FlexWrapper>
                 {/*<BackgroundFooter>*/}
                 {/*    <img src={backgroundFooter} alt="background footer"/>*/}

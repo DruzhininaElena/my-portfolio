@@ -8,17 +8,25 @@ const ListSocialIcons = styled.ul`
     display: flex;
     justify-content: space-around;
     min-width: 180px;
-    color: ${theme.colors.primaryFont};
 `
 
 const SocialIcon = styled.li`
+    color: ${theme.colors.primaryFont};
     
-    transition: all 0.05s ease;
+    transition: all 0.2s ease;
     
     &:hover {
         transform: translateY(-5px);
+        color: ${theme.colors.secondaryFont};
     }
+    
+    a svg {
+        fill: currentColor;
+    }
+    
 `
+
+
 
 export const S = {
     StyledSocial,
