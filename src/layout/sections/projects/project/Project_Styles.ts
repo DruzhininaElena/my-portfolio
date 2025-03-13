@@ -13,10 +13,10 @@ const StyledProject = styled.div`
         max-width: 500px;
     }
     
-    &:hover {
-        box-shadow: 0 3px 30px rgba(0, 0, 0, 0.7);
-        transform: scale(1.01);
-    }
+    //&:hover {
+    //    box-shadow: 0 3px 30px rgba(0, 0, 0, 0.7);
+    //    transform: scale(1.01);
+    //}
 `
 
 const ProjectContent = styled.div`

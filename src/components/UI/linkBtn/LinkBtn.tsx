@@ -17,13 +17,12 @@ export const LinkBtn = styled.a<ButtonPropsType>`
     line-height: 1.5;
     white-space: nowrap;
     transition: all .1s ease-in-out;
-    
+
     &:hover {
-        background-color: ${theme.colors.secondaryAccent};
-        color: white;
+        background-color: rgba(255, 199, 54, 0.8);
     }
-    
-    
+
+
     @media ${theme.media.tablet} {
         &:hover {
             background-color: ${theme.colors.accent};

@@ -18,7 +18,7 @@ const TabItem = styled.li``
 const LinkTab = styled.a`
     transition: .1s ease-in-out;
     &.active, &:hover {
-        color: ${theme.colors.secondaryAccent};
+        color: ${theme.colors.accent};
     }
 `
 

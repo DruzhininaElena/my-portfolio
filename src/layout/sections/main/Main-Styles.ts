@@ -49,7 +49,7 @@ const Title = styled.h1`
     font-weight: 700;
     font-size: 20px;
     text-transform: uppercase;
-    color: ${theme.colors.secondaryAccent};
+    color: ${theme.colors.accent};
 
     @media ${theme.media.desktopXl} {
         width: 100%;
