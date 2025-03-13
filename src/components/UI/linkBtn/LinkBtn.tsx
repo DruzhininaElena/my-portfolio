@@ -17,9 +17,11 @@ export const LinkBtn = styled.a<ButtonPropsType>`
     line-height: 1.5;
     white-space: nowrap;
     transition: all .1s ease-in-out;
-
-    &:hover {
-        background-color: rgba(253, 196, 53, 0.8);
+    
+    @media screen and (max-width: 768px) {
+        &:hover {
+            background-color: rgba(253, 196, 53, 0.8);
+        }
     }
 
     ${props => props.$outlined && css<ButtonPropsType>`
