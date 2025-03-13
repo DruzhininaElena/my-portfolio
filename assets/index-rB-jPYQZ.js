@@ -1695,10 +1695,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         max-width: 500px;
     }
     
-    &:hover {
-        box-shadow: 0 3px 30px rgba(0, 0, 0, 0.7);
-        transform: scale(1.01);
-    }
+    //&:hover {
+    //    box-shadow: 0 3px 30px rgba(0, 0, 0, 0.7);
+    //    transform: scale(1.01);
+    //}
 `,T3=pt.div`
     width: 100%;
 `,x3=pt.div`
