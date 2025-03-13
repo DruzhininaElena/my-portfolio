@@ -257,9 +257,11 @@ Error generating stack: `+a.message+`
     line-height: 1.5;
     white-space: nowrap;
     transition: all .1s ease-in-out;
-
-    &:hover {
-        background-color: rgba(253, 196, 53, 0.8);
+    
+    @media screen and (max-width: 768px) {
+        &:hover {
+            background-color: rgba(253, 196, 53, 0.8);
+        }
     }
 
     ${e=>e.$outlined&&Dn`
@@ -1900,15 +1902,16 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     
     transition: all 0.2s ease;
     
-    &:hover {
-        transform: translateY(-5px);
-        color: ${pt.colors.secondaryFont};
-    }
-    
     a svg {
         fill: currentColor;
     }
-    
+
+    @media screen and (max-width: 768px) {
+        &:hover {
+            transform: translateY(-5px);
+            color: ${pt.colors.secondaryFont};
+        }
+    }
 `,Cs={StyledSocial:P2,ListSocialIcons:N2,SocialIcon:L2},z2=()=>X.jsx(Cs.StyledSocial,{children:X.jsxs(Cs.ListSocialIcons,{children:[X.jsx(Cs.SocialIcon,{children:X.jsx("a",{href:"https://t.me/Druzhinina_EA",target:"_blank",children:X.jsx(_i,{iconId:"telegram",height:"40",width:"40",viewBox:"3 2 18 18"})})}),X.jsx(Cs.SocialIcon,{children:X.jsx("a",{href:"https://api.whatsapp.com/send?phone=9969384377",target:"_blank",children:X.jsx(_i,{iconId:"whatsapp",height:"40",width:"40",viewBox:"-2 -2 23 23"})})}),X.jsx(Cs.SocialIcon,{children:X.jsx("a",{href:"https://elenashebrova@gmail.com",target:"_blank",children:X.jsx(_i,{iconId:"email",height:"40",width:"40",viewBox:"-2 -8 45 45"})})})]})}),B2=""+new URL("yellow-bg-footer-BH1L16bM.png",import.meta.url).href,V2=mt.footer`
     margin: 0 auto;
     background-image: url(${B2});
