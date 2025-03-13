@@ -14,7 +14,7 @@ export const Skills: React.FC = () => {
                 <SectionTitle title={'Skills'}/>
                 <S.GridWrapper>
                     <Fade cascade
-                          damping={0.1}
+                          damping={0.05}
                           direction={'up'}>
                         {SkillsData.map(skill => <Icon {...skill} key={skill.iconId}/>)}
                     </Fade>

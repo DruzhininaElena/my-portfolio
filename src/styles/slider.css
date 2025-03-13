@@ -26,7 +26,7 @@
 }
 
 .alice-carousel__dots-item:not(.__custom).__active {
-    background-color: #FDC435;
+    background-color: #C435FD;
     width: 20px;
     border-radius: 20px;
 }

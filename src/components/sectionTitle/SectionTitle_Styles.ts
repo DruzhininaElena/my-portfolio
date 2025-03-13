@@ -22,7 +22,8 @@ const StyledSectionTitle = styled.h2`
         border-radius: 2px;
         width: 100px;
         height: 4px;
-        background: ${theme.colors.accent};
+        background-image: linear-gradient(to right, ${theme.colors.accent} 30%, ${theme.colors.secondaryAccent});
+        //background: ${theme.colors.secondaryAccent};
     }
 
     @media ${theme.media.desktopLg} {

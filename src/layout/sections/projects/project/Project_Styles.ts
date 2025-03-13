@@ -14,7 +14,7 @@ const StyledProject = styled.div`
     }
     
     &:hover {
-        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.7);
+        box-shadow: 0 3px 30px rgba(0, 0, 0, 0.7);
         transform: scale(1.01);
     }
 `

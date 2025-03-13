@@ -19,7 +19,8 @@ export const LinkBtn = styled.a<ButtonPropsType>`
     transition: all .1s ease-in-out;
     
     &:hover {
-        background-color: rgba(253, 196, 53, 0.8);
+        background-color: ${theme.colors.secondaryAccent};
+        color: white;
     }
     
     
