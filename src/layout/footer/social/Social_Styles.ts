@@ -15,16 +15,22 @@ const SocialIcon = styled.li`
     
     transition: all 0.2s ease;
     
+    &:hover {
+        transform: translateY(-5px);
+        color: ${theme.colors.secondaryFont};
+    }
+
+    @media ${theme.media.tablet} {
+        &:hover {
+            transform: translateY(0);
+            color: ${theme.colors.primaryFont};
+        }
+    }
+    
     a svg {
         fill: currentColor;
     }
-
-    @media screen and (max-width: 768px) {
-        &:hover {
-            transform: translateY(-5px);
-            color: ${theme.colors.secondaryFont};
-        }
-    }
+    
 `
 
 

@@ -18,9 +18,14 @@ export const LinkBtn = styled.a<ButtonPropsType>`
     white-space: nowrap;
     transition: all .1s ease-in-out;
     
-    @media screen and (max-width: 768px) {
+    &:hover {
+        background-color: rgba(253, 196, 53, 0.8);
+    }
+    
+    
+    @media ${theme.media.tablet} {
         &:hover {
-            background-color: rgba(253, 196, 53, 0.8);
+            background-color: ${theme.colors.accent};
         }
     }
 
@@ -28,6 +33,12 @@ export const LinkBtn = styled.a<ButtonPropsType>`
         border: 2px solid ${theme.colors.primaryFont};
         background-color: transparent;
         padding-top: 6px;
+
+        @media ${theme.media.tablet} {
+            &:hover {
+                background-color: transparent;
+            }
+        }
     `}
 
 `
