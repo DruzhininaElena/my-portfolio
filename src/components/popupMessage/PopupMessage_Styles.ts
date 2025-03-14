@@ -3,8 +3,8 @@ import {theme} from '../../styles/Theme.ts';
 
 const PopupMessageStyled = styled.div<{$bgColor?: string, $color?: string}>`
     position: fixed;
-    top: 100px;
-    right: 40px;
+    bottom: 80px;
+    right: 80px;
     padding: 10px 10px 10px 50px;
     z-index: 500;
     background-color: ${props => props.$bgColor || '#ddffe7'};
@@ -28,10 +28,10 @@ const PopupMessageStyled = styled.div<{$bgColor?: string, $color?: string}>`
     }
 
     @media ${theme.media.tablet} {
-        right: unset;
-        top: 16px;
-        left: 50%;
-        transform: translateX(-50%);
+        bottom: 15px;
+        right: 50%;
+        transform: translateX(50%);
+        
     }
 `
 
