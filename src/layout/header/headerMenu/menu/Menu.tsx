@@ -13,6 +13,7 @@ export const Menu: React.FC = () => {
 
     const handleScroll = () => {
         const scrollY = window.scrollY;
+        const maxScrollY = document.documentElement.scrollHeight - window.innerHeight -1;
 
         const sectionPositions = menuItems.map((item) => {
             const section = document.getElementById(item.toLowerCase());
@@ -23,7 +24,10 @@ export const Menu: React.FC = () => {
             return scrollY >= pos && (index === sectionPositions.length - 1 || scrollY < sectionPositions[index + 1]);
         });
 
-        setActiveIndex(currentIndex);
+        if (scrollY > maxScrollY) {
+            setActiveIndex(menuItems.length - 1);
+        } else setActiveIndex(currentIndex);
+
     };
 
     useEffect(() => {
