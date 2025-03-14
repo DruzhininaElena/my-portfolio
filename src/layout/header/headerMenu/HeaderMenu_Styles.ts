@@ -44,7 +44,7 @@ const MobileMenuPopup = styled.div<{$isOpen: boolean}>`
     bottom: 0;
     right: 0;
     left: 0;
-    background-image: linear-gradient(#FDC435, #F5AA54);
+    background-image: linear-gradient(#FDC435, #737373);
     z-index: 20;
     display: flex;
     align-items: center;

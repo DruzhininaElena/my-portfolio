@@ -6,7 +6,7 @@ export const theme = {
         secondaryAccent: '#C435FD',
 
         primaryFont: '#25282B',
-        secondaryFont: '#828282',
+        secondaryFont: '#737373',
 
         borderColor: '#E8ECF4'
     },
@@ -14,11 +14,7 @@ export const theme = {
     media: {
         desktopXl: 'screen and (max-width: 1200px)',
         desktopLg: 'screen and (max-width: 992px)',
-        tablet: 'screen and (max-width: 768px)',
+        tablet: 'screen and (max-width: 769px)',
         mobile: 'screen and (max-width: 576px)'
-    },
-
-    // animations: {
-    //     transition: '.25s ease-in-out'
-    // }
+    }
 }
