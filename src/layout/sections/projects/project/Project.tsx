@@ -23,7 +23,7 @@ export const Project: React.FC<ProjectPropsType> = ({
         <S.StyledProject>
             <S.ProjectImg src={imageSrc} alt="project photo"/>
             <S.ProjectContent>
-                <S.ContentWrapper>
+
                     <S.ProjectTitle>{title}</S.ProjectTitle>
                     <S.ProjectDescription>{description}</S.ProjectDescription>
                     <FlexWrapper $gap={'20px'}>
@@ -31,7 +31,6 @@ export const Project: React.FC<ProjectPropsType> = ({
                         <LinkBtn href={gitHubSrc} target={'_blank'} $outlined>Code</LinkBtn>
                     </FlexWrapper>
 
-                </S.ContentWrapper>
             </S.ProjectContent>
         </S.StyledProject>
     );

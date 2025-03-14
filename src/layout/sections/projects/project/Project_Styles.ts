@@ -21,11 +21,12 @@ const StyledProject = styled.div`
 
 const ProjectContent = styled.div`
     width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 250px);
 `
 
-const ContentWrapper = styled.div`
-    padding: 30px;
-`
 
 const ProjectTitle = styled.h3`
     font-weight: 700;
@@ -36,6 +37,7 @@ const ProjectTitle = styled.h3`
 const ProjectDescription = styled.p`
     font-size: 18px;
     margin: 24px 0 30px;
+    flex-grow: 1;
 `
 
 const ProjectImg = styled.img`
@@ -48,7 +50,6 @@ const ProjectImg = styled.img`
 export const S = {
     StyledProject,
     ProjectContent,
-    ContentWrapper,
     ProjectTitle,
     ProjectDescription,
     ProjectImg
