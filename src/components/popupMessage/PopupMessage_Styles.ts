@@ -28,7 +28,8 @@ const PopupMessageStyled = styled.div<{$bgColor?: string, $color?: string}>`
     }
 
     @media ${theme.media.tablet} {
-        bottom: 15px;
+        bottom: unset;
+        top: 20px;
         right: 50%;
         transform: translateX(50%);
         
