@@ -1868,7 +1868,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     }
 
     @media ${dt.media.tablet} {
-        bottom: 15px;
+        bottom: unset;
+        top: 20px;
         right: 50%;
         transform: translateX(50%);
         
