@@ -7,17 +7,13 @@ export const Menu: React.FC = () => {
     const menuItems: string[] = ['About', 'Skills', 'Projects', 'Testimony', 'Contacts']
     const [activeIndex, setActiveIndex] = useState(0);
 
-    const handleClick = (index: number) => {
-        setActiveIndex(index);
-    };
-
     const handleScroll = () => {
         const scrollY = window.scrollY;
         const maxScrollY = document.documentElement.scrollHeight - window.innerHeight -1;
 
         const sectionPositions = menuItems.map((item) => {
             const section = document.getElementById(item.toLowerCase());
-            return section ? section.offsetTop : 0;
+            return section ? section.offsetTop - 1 : 0;
         });
 
         const currentIndex = sectionPositions.findIndex((pos, index) => {
@@ -41,8 +37,7 @@ export const Menu: React.FC = () => {
     return (
         <S.MenuList>
             {menuItems.map((item, index) =>
-                <li key={index}
-                    onClick={() => handleClick(index)}>
+                <li key={index}>
                     <S.NavLink href={`#${item.toLowerCase()}`}
                                className={activeIndex === index ? 'active' : ''}>
                         {item}

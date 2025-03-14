@@ -1,5 +1,6 @@
 import {createGlobalStyle} from 'styled-components';
 import {theme} from './Theme.ts';
+import backgroundFooter from '../assets/images/yellow-bg-footer.png'
 
 export const GlobalStyle = createGlobalStyle`
     :root {
@@ -34,6 +35,10 @@ export const GlobalStyle = createGlobalStyle`
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
+        background-image: url(${backgroundFooter});
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
         
     }
 
