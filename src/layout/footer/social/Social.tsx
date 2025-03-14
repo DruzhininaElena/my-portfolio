@@ -18,8 +18,8 @@ export const Social: React.FC = () => {
                     </a>
                 </S.SocialIcon>
                 <S.SocialIcon>
-                    <a href="https://elenashebrova@gmail.com" target={'_blank'}>
-                        <Icon iconId={'email'} height={'40'} width={'40'} viewBox={'-2 -8 45 45'}/>
+                    <a href="https://www.instagram.com/dr_elena_druzhinina" target={'_blank'}>
+                        <Icon iconId={'instagram'} height={'40'} width={'40'} viewBox={'-3 -5 42 43'}/>
                     </a>
                 </S.SocialIcon>
             </S.ListSocialIcons>
