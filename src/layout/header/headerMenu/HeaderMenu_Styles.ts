@@ -44,19 +44,18 @@ const MobileMenuPopup = styled.div<{$isOpen: boolean}>`
     bottom: 0;
     right: 0;
     left: 0;
-    background-image: linear-gradient(#FDC435, #25282B);
+    background-image: linear-gradient(#FDC435, #F5AA54);
     z-index: 20;
     display: flex;
     align-items: center;
     justify-content: center;
     transform: translateY(-100%);
     transition: 0.75s ease;
-    
-    
-    ${props => props.$isOpen && css<{$isOpen: boolean}>`
+
+
+    ${props => props.$isOpen && css<{ $isOpen: boolean }>`
         transform: translateY(0);
     `}
-    
     ul {
         font-size: 34px;
         color: ${theme.colors.primaryBg};
@@ -67,6 +66,7 @@ const MobileMenuPopup = styled.div<{$isOpen: boolean}>`
         @media ${theme.media.mobile} {
             font-size: 28px;
         }
+
         li {
             ${NavLink} {
                 &::before {
