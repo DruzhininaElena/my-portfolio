@@ -12,7 +12,10 @@ type PopupMessagePropsType = {
     closePopup: () => void
 }
 
-export const PopupMessage: React.FC<PopupMessagePropsType> = ({text, bgColor, color, response, viewBox, iconId, closePopup}: PopupMessagePropsType) => {
+export const PopupMessage: React.FC<PopupMessagePropsType> = (props: PopupMessagePropsType) => {
+
+    const {text, bgColor, color, response, viewBox, iconId, closePopup} = props
+
     return (
         <S.PopupMessageStyled $bgColor={bgColor} $color={color} onClick={closePopup}>
             <S.MessageIcon>

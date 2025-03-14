@@ -53,7 +53,7 @@ export const Contacts: React.FC = () => {
                     </S.FieldWrapper>
                     <S.FieldWrapper>
                         <S.FieldLabel htmlFor={'email'}>Email</S.FieldLabel>
-                        <S.Field id="email" name={'email'} required/>
+                        <S.Field id="email" name={'email'} type={'email'} required/>
                     </S.FieldWrapper>
                     <S.FieldWrapper>
                         <S.FieldLabel htmlFor={'message'}>Message</S.FieldLabel>
