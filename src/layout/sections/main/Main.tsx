@@ -15,6 +15,7 @@ export const Main: React.FC = () => {
                             strings: ['Frontend Developer'],
                             autoStart: true,
                             loop: true,
+                            delay: 75,
                         }}
                     />
                 </S.Title>
