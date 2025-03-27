@@ -1,27 +1,20 @@
-import React, {useState} from 'react';
+
 import {Menu} from '../menu/Menu.tsx';
 import {S} from '../HeaderMenu_Styles.ts';
 
-export const MobileMenu: React.FC = () => {
+type Props = {
+    menuIsOpen: boolean
+    toggleMenu: () => void
+}
 
-    const [menuIsOpen, setMenuIsOpen] = useState(false)
-
-    function handleClickBurgerButton() {
-        setMenuIsOpen(!menuIsOpen)
-    }
-    // function handleClickMenuItem(event: React.MouseEvent<HTMLDivElement>): void {
-    //     const element = event.target as HTMLElement;
-    //     if (element.tagName === 'A') {
-    //         setMenuIsOpen(!menuIsOpen)
-    //     }
-    // }
+export const MobileMenu = ({menuIsOpen, toggleMenu}: Props) => {
 
     return (
         <nav>
-            <S.BurgerButton $isOpen={menuIsOpen} onClick={ handleClickBurgerButton } aria-haspopup>
+            <S.BurgerButton $isOpen={menuIsOpen} onClick={toggleMenu} aria-haspopup>
                 <span></span>
             </S.BurgerButton>
-            <S.MobileMenuPopup $isOpen={menuIsOpen} aria-modal onClick={ () => { setMenuIsOpen(false) } }>
+            <S.MobileMenuPopup $isOpen={menuIsOpen} aria-modal onClick={toggleMenu}>
                 <Menu/>
             </S.MobileMenuPopup>
         </nav>

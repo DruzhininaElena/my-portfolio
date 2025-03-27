@@ -1,9 +1,10 @@
 import calculator from '../../../assets/images/projects/calculator.webp';
 import topMovies from '../../../assets/images/projects/top-movies.webp';
 import todo from '../../../assets/images/projects/todo.webp';
-import imageProject1Webp from '../../../assets/images/projects/project1.webp';
-import imageProject2Webp from '../../../assets/images/projects/project2.webp';
-import imageProject3Webp from '../../../assets/images/projects/project3.webp';
+import couter from '../../../assets/images/projects/counter.webp';
+
+// import imageProject2Webp from '../../../assets/images/projects/project2.webp';
+// import imageProject3Webp from '../../../assets/images/projects/project3.webp';
 
 type projectDataType = {
     id: number;
@@ -27,6 +28,15 @@ export const projectsData: projectDataType[] = [
     },
     {
         id: 2,
+        title: 'Counter',
+        description: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
+        imageSrc: couter,
+        type: 'react',
+        projectSrc: 'https://druzhininaelena.github.io/counter/',
+        gitHubSrc: 'https://github.com/DruzhininaElena/counter'
+    },
+    {
+        id: 3,
         title: 'TODO-app',
         description: 'A Todo List app in JavaScript is a simple web application that helps users create, manage, and track their tasks.',
         imageSrc: todo,
@@ -35,7 +45,7 @@ export const projectsData: projectDataType[] = [
         gitHubSrc: 'https://github.com/DruzhininaElena/todo',
     },
     {
-        id: 3,
+        id: 4,
         title: 'Calculator-app',
         description: 'This is a simple web application that allows users to perform basic mathematical operations such as addition, subtraction, multiplication, and division.',
         imageSrc: calculator,
@@ -43,27 +53,20 @@ export const projectsData: projectDataType[] = [
         projectSrc: 'https://druzhininaelena.github.io/calculator-app/',
         gitHubSrc: 'https://github.com/DruzhininaElena/calculator-app'
     },
-    {
-        id: 4,
-        title: 'Project Name1',
-        description: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
-        imageSrc: imageProject1Webp,
-        type: 'react'
-    },
-    {
-        id: 5,
-        title: 'Project Name2',
-        description: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
-        imageSrc: imageProject2Webp,
-        type: 'react'
-    },
-    {
-        id: 6,
-        title: 'Project Name3',
-        description: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
-        imageSrc: imageProject3Webp,
-        type: 'react'
-    }
+    // {
+    //     id: 5,
+    //     title: 'Project Name2',
+    //     description: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
+    //     imageSrc: imageProject2Webp,
+    //     type: 'react'
+    // },
+    // {
+    //     id: 6,
+    //     title: 'Project Name3',
+    //     description: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
+    //     imageSrc: imageProject3Webp,
+    //     type: 'react'
+    // }
 ]
 
 export type tabStatusType = 'all' | 'vue' | 'react' | 'js'

@@ -46,15 +46,16 @@ const MobileMenuPopup = styled.div<{$isOpen: boolean}>`
     left: 0;
     background-image: linear-gradient(#FDC435, #737373);
     z-index: 20;
-    display: flex;
     align-items: center;
     justify-content: center;
     transform: translateY(-100%);
     transition: 0.75s ease;
+    display: none;
 
 
     ${props => props.$isOpen && css<{ $isOpen: boolean }>`
         transform: translateY(0);
+        display: flex;
     `}
     ul {
         font-size: 34px;

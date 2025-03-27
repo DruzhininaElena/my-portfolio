@@ -9,6 +9,11 @@ import {useState} from 'react';
 
 export const Header: React.FC = () => {
     const [scroll, setScroll] = useState(window.scrollY)
+    const [menuIsOpen, setMenuIsOpen] = useState(false)
+
+    function handleClickBurgerButton() {
+        setMenuIsOpen(!menuIsOpen)
+    }
 
     const handleScroll = () => {
         setScroll(window.scrollY);
@@ -29,11 +34,11 @@ export const Header: React.FC = () => {
     }, []);
 
     return (
-        <S.Header $isPageScrolled={scroll > 0}>
+        <S.Header $isPageScrolled={scroll > 0} $menuIsOpen={menuIsOpen}>
             <Container>
                 <FlexWrapper $justify={'space-between'} $align={'center'}>
                     <Logo/>
-                    {width > breakpoint ? <DesktopMenu/> : <MobileMenu/>}
+                    {width > breakpoint ? <DesktopMenu/> : <MobileMenu menuIsOpen={menuIsOpen} toggleMenu={handleClickBurgerButton}/>}
                 </FlexWrapper>
                 {/*<ThemeIcon>*/}
                 {/*    <Icon iconId={'theme'} height={'40'} width={'40'} viewBox={'0 0 24 24'}/>*/}
