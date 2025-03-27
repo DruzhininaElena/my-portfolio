@@ -29,7 +29,7 @@ export const Header: React.FC = () => {
     }, []);
 
     return (
-        <S.Header $isPageScrolled={scroll > 200}>
+        <S.Header $isPageScrolled={scroll > 0}>
             <Container>
                 <FlexWrapper $justify={'space-between'} $align={'center'}>
                     <Logo/>

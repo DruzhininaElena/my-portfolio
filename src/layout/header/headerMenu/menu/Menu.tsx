@@ -9,7 +9,7 @@ export const Menu: React.FC = () => {
 
     const handleScroll = () => {
         const scrollY = window.scrollY;
-        const maxScrollY = document.documentElement.scrollHeight - window.innerHeight -1;
+        const maxScrollY = document.documentElement.scrollHeight - window.innerHeight - 1;
 
         const sectionPositions = menuItems.map((item) => {
             const section = document.getElementById(item.toLowerCase());

@@ -7,13 +7,10 @@ import {S} from './Footer_Styles.ts';
 export const Footer: React.FC = () => {
     return (
         <S.StyledFooter>
-                <FlexWrapper $direction={'column'} $align={'center'}>
-                    <Social/>
-                    <S.Copyright>© Elena Druzhinina, 2025</S.Copyright>
-                </FlexWrapper>
-                {/*<BackgroundFooter>*/}
-                {/*    <img src={backgroundFooter} alt="background footer"/>*/}
-                {/*</BackgroundFooter>*/}
+            <FlexWrapper $direction={'column'} $align={'center'}>
+                <Social/>
+                <S.Copyright>© Elena Druzhinina, 2025</S.Copyright>
+            </FlexWrapper>
         </S.StyledFooter>
     );
 };
