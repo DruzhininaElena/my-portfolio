@@ -242,10 +242,10 @@ Error generating stack: `+a.message+`
     z-index: 10;
 
     ${e=>e.$isPageScrolled&&Dn`
-        background-color: rgb(255, 255, 255);
-        border-bottom: 1px solid #E8ECF4;
+        border-bottom: 1px solid rgb(0, 0, 0, .05);
+        backdrop-filter: blur(8px);
     `}
-`,g_={Header:p_},v_=()=>{const[e,i]=nt.useState(window.scrollY),r=()=>{i(window.scrollY)};nt.useEffect(()=>(window.addEventListener("scroll",r),()=>window.removeEventListener("scroll",r)),[]);const[o,u]=nt.useState(window.innerWidth),h=768;return nt.useEffect(()=>{const p=()=>u(window.innerWidth);return window.addEventListener("resize",p),()=>window.removeEventListener("resize",p)},[]),X.jsx(g_.Header,{$isPageScrolled:e>200,children:X.jsx(to,{children:X.jsxs(eo,{$justify:"space-between",$align:"center",children:[X.jsx(u_,{}),o>h?X.jsx(h_,{}):X.jsx(m_,{})]})})})},qs=pt.a`
+`,g_={Header:p_},v_=()=>{const[e,i]=nt.useState(window.scrollY),r=()=>{i(window.scrollY)};nt.useEffect(()=>(window.addEventListener("scroll",r),()=>window.removeEventListener("scroll",r)),[]);const[o,u]=nt.useState(window.innerWidth),h=768;return nt.useEffect(()=>{const p=()=>u(window.innerWidth);return window.addEventListener("resize",p),()=>window.removeEventListener("resize",p)},[]),X.jsx(g_.Header,{$isPageScrolled:e>0,children:X.jsx(to,{children:X.jsxs(eo,{$justify:"space-between",$align:"center",children:[X.jsx(u_,{}),o>h?X.jsx(h_,{}):X.jsx(m_,{})]})})})},qs=pt.a`
     font-family: "Roboto", sans-serif;
     border-radius: 8px;
     display: inline-block;
