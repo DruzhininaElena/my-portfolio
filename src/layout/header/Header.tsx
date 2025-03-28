@@ -34,7 +34,7 @@ export const Header: React.FC = () => {
     }, []);
 
     return (
-        <S.Header $isPageScrolled={scroll > 0} $menuIsOpen={menuIsOpen}>
+        <S.Header $isPageScrolled={scroll > 10} $menuIsOpen={menuIsOpen}>
             <Container>
                 <FlexWrapper $justify={'space-between'} $align={'center'}>
                     <Logo/>
