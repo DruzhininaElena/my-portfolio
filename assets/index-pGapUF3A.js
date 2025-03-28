@@ -246,7 +246,7 @@ Error generating stack: `+a.message+`
         border-bottom: 1px solid rgb(0, 0, 0, .05);
         backdrop-filter: blur(8px);
     `}
-`,bT={Header:vT},ST=()=>{const[n,i]=Q.useState(window.scrollY),[s,o]=Q.useState(!1);function u(){o(!s)}const h=()=>{i(window.scrollY)};Q.useEffect(()=>(window.addEventListener("scroll",h),()=>window.removeEventListener("scroll",h)),[]);const[m,d]=Q.useState(window.innerWidth),p=768;return Q.useEffect(()=>{const f=()=>d(window.innerWidth);return window.addEventListener("resize",f),()=>window.removeEventListener("resize",f)},[]),G.jsx(bT.Header,{$isPageScrolled:n>0,$menuIsOpen:s,children:G.jsx(Kl,{children:G.jsxs(Zl,{$justify:"space-between",$align:"center",children:[G.jsx(dT,{}),m>p?G.jsx(yT,{}):G.jsx(gT,{menuIsOpen:s,toggleMenu:u})]})})})},Cs=bt.a`
+`,bT={Header:vT},ST=()=>{const[n,i]=Q.useState(window.scrollY),[s,o]=Q.useState(!1);function u(){o(!s)}const h=()=>{i(window.scrollY)};Q.useEffect(()=>(window.addEventListener("scroll",h),()=>window.removeEventListener("scroll",h)),[]);const[m,d]=Q.useState(window.innerWidth),p=768;return Q.useEffect(()=>{const f=()=>d(window.innerWidth);return window.addEventListener("resize",f),()=>window.removeEventListener("resize",f)},[]),G.jsx(bT.Header,{$isPageScrolled:n>10,$menuIsOpen:s,children:G.jsx(Kl,{children:G.jsxs(Zl,{$justify:"space-between",$align:"center",children:[G.jsx(dT,{}),m>p?G.jsx(yT,{}):G.jsx(gT,{menuIsOpen:s,toggleMenu:u})]})})})},Cs=bt.a`
     font-family: "Roboto", sans-serif;
     border-radius: 8px;
     display: inline-block;
