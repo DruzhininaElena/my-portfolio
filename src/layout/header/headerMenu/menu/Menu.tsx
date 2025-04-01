@@ -4,7 +4,7 @@ import {S} from '../HeaderMenu_Styles.ts';
 
 export const Menu: React.FC = () => {
 
-    const menuItems: string[] = ['About', 'Skills', 'Projects', 'Testimony', 'Contacts']
+    const menuItems: string[] = ['About', 'Skills', 'Projects', 'Contacts']
     const [activeIndex, setActiveIndex] = useState(0);
 
     const handleScroll = () => {
