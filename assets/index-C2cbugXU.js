@@ -207,7 +207,7 @@ Error generating stack: `+a.message+`
         }
     }
 
-`,zl={MenuList:hT,NavLink:Ov,MobileMenuPopup:pT,BurgerButton:mT},Dv=()=>{const n=["About","Skills","Projects","Testimony","Contacts"],[i,s]=Q.useState(0),o=()=>{const u=window.scrollY,h=document.documentElement.scrollHeight-window.innerHeight-1,m=n.map(p=>{const f=document.getElementById(p.toLowerCase());return f?f.offsetTop-1:0}),d=m.findIndex((p,f)=>u>=p&&(f===m.length-1||u<m[f+1]));u>h?s(n.length-1):s(d)};return Q.useEffect(()=>(window.addEventListener("scroll",o),()=>{window.removeEventListener("scroll",o)}),[]),G.jsx(zl.MenuList,{children:n.map((u,h)=>G.jsx("li",{children:G.jsx(zl.NavLink,{href:`#${u.toLowerCase()}`,className:i===h?"active":"",children:u})},h))})},yT=()=>G.jsx("nav",{children:G.jsx(Dv,{})}),Kl=bt.div`
+`,zl={MenuList:hT,NavLink:Ov,MobileMenuPopup:pT,BurgerButton:mT},Dv=()=>{const n=["About","Skills","Projects","Contacts"],[i,s]=Q.useState(0),o=()=>{const u=window.scrollY,h=document.documentElement.scrollHeight-window.innerHeight-1,m=n.map(p=>{const f=document.getElementById(p.toLowerCase());return f?f.offsetTop-1:0}),d=m.findIndex((p,f)=>u>=p&&(f===m.length-1||u<m[f+1]));u>h?s(n.length-1):s(d)};return Q.useEffect(()=>(window.addEventListener("scroll",o),()=>{window.removeEventListener("scroll",o)}),[]),G.jsx(zl.MenuList,{children:n.map((u,h)=>G.jsx("li",{children:G.jsx(zl.NavLink,{href:`#${u.toLowerCase()}`,className:i===h?"active":"",children:u})},h))})},yT=()=>G.jsx("nav",{children:G.jsx(Dv,{})}),Kl=bt.div`
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
