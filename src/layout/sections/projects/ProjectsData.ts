@@ -29,7 +29,7 @@ export const projectsData: projectDataType[] = [
     {
         id: 2,
         title: 'Counter',
-        description: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
+        description: 'A simple yet stylish counter built with React and TypeScript. Featuring: increment/decrement buttons, reset functionality, LocalStorage persistence',
         imageSrc: couter,
         type: 'react',
         projectSrc: 'https://druzhininaelena.github.io/counter/',
@@ -56,17 +56,10 @@ export const projectsData: projectDataType[] = [
     // {
     //     id: 5,
     //     title: 'Project Name2',
-    //     description: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
-    //     imageSrc: imageProject2Webp,
-    //     type: 'react'
-    // },
-    // {
-    //     id: 6,
-    //     title: 'Project Name3',
-    //     description: 'I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.',
-    //     imageSrc: imageProject3Webp,
-    //     type: 'react'
-    // }
+    //     description: 'I created this personal project in order to show how to create an interface in Figma using a
+    // portfolio as an example.', imageSrc: imageProject2Webp, type: 'react' }, { id: 6, title: 'Project Name3',
+    // description: 'I created this personal project in order to show how to create an interface in Figma using a
+    // portfolio as an example.', imageSrc: imageProject3Webp, type: 'react' }
 ]
 
 export type tabStatusType = 'all' | 'vue' | 'react' | 'js'
