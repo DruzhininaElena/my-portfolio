@@ -21,8 +21,9 @@ export const Main: React.FC = () => {
                 </S.Title>
                 <S.Name>Hello, my name is Elena Druzhinina</S.Name>
                 <S.Description>
-                    Short text with details about you, what you do or your professional career. You can add more
-                    information on the about page.
+                    Front-end developer with experience in creating SPAs using TypeScript, React, Redux (RTK Query).
+                    Constantly improving my working technologies. Also planning to expand my technical expertise towards
+                    Node.js to become a Full-Stack developer.
                 </S.Description>
                 <S.ButtonsWrapper>
                     <LinkBtn href={'#projects'}>Projects</LinkBtn>
