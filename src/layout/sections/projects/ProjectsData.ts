@@ -1,10 +1,8 @@
 import calculator from '../../../assets/images/projects/calculator.webp';
 import topMovies from '../../../assets/images/projects/top-movies.webp';
 import todo from '../../../assets/images/projects/todo.webp';
-import couter from '../../../assets/images/projects/counter.webp';
-
-// import imageProject2Webp from '../../../assets/images/projects/project2.webp';
-// import imageProject3Webp from '../../../assets/images/projects/project3.webp';
+import counter from '../../../assets/images/projects/counter.webp';
+import rickAndMorty from '../../../assets/images/projects/rick-and-morty.webp';
 
 type projectDataType = {
     id: number;
@@ -19,6 +17,15 @@ type projectDataType = {
 export const projectsData: projectDataType[] = [
     {
         id: 1,
+        title: 'Tasks Manager',
+        description: 'A Todo List app in JavaScript is a simple web application that helps users create, manage, and track their tasks.',
+        imageSrc: todo,
+        type: 'react',
+        projectSrc: 'https://druzhininaelena.github.io/todo-react/',
+        gitHubSrc: 'https://github.com/DruzhininaElena/todo-react',
+    },
+    {
+        id: 2,
         title: 'IMDB Top 250',
         description: 'The application fetches data from the IMDb API, showcasing essential details such as film titles, release years, ratings, directors, and brief plot descriptions. ',
         imageSrc: topMovies,
@@ -27,22 +34,13 @@ export const projectsData: projectDataType[] = [
         gitHubSrc: 'https://github.com/DruzhininaElena/top-movies-app'
     },
     {
-        id: 2,
+        id: 3,
         title: 'Counter',
         description: 'A simple yet stylish counter built with React and TypeScript. Featuring: increment/decrement buttons, reset functionality, LocalStorage persistence',
-        imageSrc: couter,
+        imageSrc: counter,
         type: 'react',
         projectSrc: 'https://druzhininaelena.github.io/counter/',
         gitHubSrc: 'https://github.com/DruzhininaElena/counter'
-    },
-    {
-        id: 3,
-        title: 'TODO-app',
-        description: 'A Todo List app in JavaScript is a simple web application that helps users create, manage, and track their tasks.',
-        imageSrc: todo,
-        type: 'js',
-        projectSrc: 'https://druzhininaelena.github.io/todo/',
-        gitHubSrc: 'https://github.com/DruzhininaElena/todo',
     },
     {
         id: 4,
@@ -53,13 +51,15 @@ export const projectsData: projectDataType[] = [
         projectSrc: 'https://druzhininaelena.github.io/calculator-app/',
         gitHubSrc: 'https://github.com/DruzhininaElena/calculator-app'
     },
-    // {
-    //     id: 5,
-    //     title: 'Project Name2',
-    //     description: 'I created this personal project in order to show how to create an interface in Figma using a
-    // portfolio as an example.', imageSrc: imageProject2Webp, type: 'react' }, { id: 6, title: 'Project Name3',
-    // description: 'I created this personal project in order to show how to create an interface in Figma using a
-    // portfolio as an example.', imageSrc: imageProject3Webp, type: 'react' }
+    {
+        id: 5,
+        title: 'Rick-and-Morty-app',
+        description: 'This is an application based on the universe of the famous animated series.',
+        imageSrc: rickAndMorty,
+        type: 'react',
+        projectSrc: 'https://druzhininaelena.github.io/rick-and-morty/',
+        gitHubSrc: 'https://github.com/DruzhininaElena/rick-and-morty'
+    },
 ]
 
 export type tabStatusType = 'all' | 'vue' | 'react' | 'js'
