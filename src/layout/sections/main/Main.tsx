@@ -27,7 +27,7 @@ export const Main: React.FC = () => {
                 </S.Description>
                 <S.ButtonsWrapper>
                     <LinkBtn href={'#projects'}>Projects</LinkBtn>
-                    <LinkBtn href={'#'} $outlined>LinkedIn</LinkBtn>
+                    <LinkBtn href={'https://drive.google.com/file/d/1ppmIQ-6R8vQnGPGCePFWT6OQ5_W2icL_/view?usp=sharing'} $outlined>CV</LinkBtn>
                 </S.ButtonsWrapper>
             </S.ContentWrapper>
             <Photo/>
